@@ -31,18 +31,18 @@
 | wight_id      | integer    | null: false                    |
 | user          | references | null: false, foreign_key: true |
 <!-- ・ストレス
-必須点数(stress_score)はカラム(stress)使用!
-任意点数は変数(hardwork,hardpersons,painfullife,expense,duty,tired,neglect,nervous)使用! -->
+必須の合計点数(stress_score)も必須カラムとの前提です!
+各ストレス要因の点数は計8変数(hardwork,hardpersons,painfullife,expense,duty,tired,neglect,nervous)使用されます! -->
 <!-- ・リフレッシュ
-必須点数(refresh_score)はカラム(refresh)使用!
-任意点数は変数使用(goodjob,matchpersons,happylife,income,hobby,energy,support,safely⇒ -->
+必須の合計点数(refresh_score)も必須カラムとの前提!
+各リフレッシュ習慣の点数は計8変数(goodjob,matchpersons,happylife,income,hobby,energy,support,safely)使用されます! -->
 ### Association
 - belongs_to :user
 - has_one :care
 |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
 
-## cares(ケア対策の決定機能) Table
+## cares(ケア対策の選定機能) Table
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | care_date     | integer    |                                |
@@ -52,7 +52,7 @@
 | caremethod_id | integer    | null: false                    |
 | user          | references | null: false, foreign_key: true |
 | health        | references | null: false, foreign_key: true |
-<!-- ケア対策は人によって異なり、1対策で1人1診断回答と指定できるものとします。 -->
+<!-- ケア対策は基本ストレスとリフレッシュの合計点数を元に提案されますが、1対策では1人健康1診断の回答によって指定できるものとします。 -->
 
 ### Association
 - belongs_to :user 
