@@ -24,16 +24,18 @@
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | stress        | string     | null: false                    |
-| hardwork      | integer    | null: false                    |
 | stress_socre  | integer    | null: false                    |
 | refresh       | string     | null: false                    |
-| goodjob       | integer    | null: false                    |
 | refresh_socre | integer    | null: false                    |
 | assess_id     | integer    | null: false                    |
 | wight_id      | integer    | null: false                    |
 | user          | references | null: false, foreign_key: true |
-<!-- ストレス|必須点数はカラム使用|任意点数は変数使用|：hardpersons,painfullife,expense,duty,tired,neglect,nervous⇒ -->
-<!-- リフレッシュ|必須点数はカラム使用|任意点数は変数使用|：easypersons,happylife,income,hobby,energy,support,safely⇒ -->
+<!-- ・ストレス
+必須点数(stress_score)はカラム(stress)使用!
+任意点数は変数(hardwork,hardpersons,painfullife,expense,duty,tired,neglect,nervous)使用! -->
+<!-- ・リフレッシュ
+必須点数(refresh_score)はカラム(refresh)使用!
+任意点数は変数使用(goodjob,matchpersons,happylife,income,hobby,energy,support,safely⇒ -->
 ### Association
 - belongs_to :user
 - has_one :care
@@ -43,16 +45,14 @@
 ## cares(ケア対策の決定機能) Table
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| user          | references | null: false, foreign_key: true |
-| health        | references | null: false, foreign_key: true |
-| care_date     | integer    | null: false                    |
-| care_time     | integer    | null: false                    |
-| care_place    | text       | null: false                    |
+| care_date     | integer    |                                |
+| care_time     | integer    |                                |
+| care_place    | text       |                                |
 | go_by         | string     |                                |
 | caremethod_id | integer    | null: false                    |
-
-
-<!-- 決済：クレジットカード決済代行サービス[pay.jp] -->
+| user          | references | null: false, foreign_key: true |
+| health        | references | null: false, foreign_key: true |
+<!-- ケア対策は人によって異なり、1対策で1人1診断回答と指定できるものとします。 -->
 
 ### Association
 - belongs_to :user 
