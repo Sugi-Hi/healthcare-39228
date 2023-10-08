@@ -30,12 +30,12 @@
 | assess_id     | integer    | null: false                    |
 | wight_id      | integer    | null: false                    |
 | user          | references | null: false, foreign_key: true |
-<!-- ・ストレス
-必須の合計点数(stress_score)も必須カラムとの前提です!
-各ストレス要因の点数は計8変数(hardwork,hardpersons,painfullife,expense,duty,tired,neglect,nervous)使用されます! -->
-<!-- ・リフレッシュ
-必須の合計点数(refresh_score)も必須カラムとの前提!
-各リフレッシュ習慣の点数は計8変数(goodjob,matchpersons,happylife,income,hobby,energy,support,safely)使用されます! -->
+<!-- ・ストレス要因
+必須の合計点数(stress_score)も必須カラムとの前提です。
+各ストレス要因の点数は計8変数(hardwork,hardpersons,painfullife,expense,duty,tired,neglect,nervous)使用されます。 -->
+<!-- ・リフレッシュ習慣
+必須の合計点数(refresh_score)も必須カラムとの前提です。
+各リフレッシュ習慣の点数は計8変数(goodjob,matchpersons,happylife,income,hobby,energy,support,safely)使用されます。 -->
 ### Association
 - belongs_to :user
 - has_one :care
