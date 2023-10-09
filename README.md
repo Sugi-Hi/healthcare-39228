@@ -45,8 +45,8 @@
 ## cares(ケア対策の選定機能) Table
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| care_date     | integer    |                                |
-| care_time     | integer    |                                |
+| care_date     | date       |                                |
+| care_time     | datetime   |                                |
 | care_place    | text       |                                |
 | go_by         | string     |                                |
 | caremethod_id | integer    | null: false                    |
