@@ -9,4 +9,7 @@ class ApplicationController < ActionController::Base
       username == ENV["BASIC_AUTH_USER"] && password == ENV["BASIC_AUTH_PASSWORD"]  # ベーシック認証の環境変数を読み込む記述
     end
   end
+
+
+  
 end
