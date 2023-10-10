@@ -74,7 +74,7 @@ a {
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #87CEFA;
+  color: #0c6399;
   text-decoration: none;
   user-select: none;
   border: 1px #87CEFA solid;
@@ -98,31 +98,43 @@ a {
   opacity: 0.5;
 }
 
-/* フォーム周り */
-.form__wrapper{
-  min-height: calc(100vh - 161px);
+/* フォーム文頭 */
+.form__text {
+  width: 100%;
+  text-align: center;
 }
 
-.form__text {
-  width: 50%;
+/* フォーム周辺 */
+.form__wrapper{
+  min-height: calc(100vh - 200px);
+  flex-direction: column;
 }
 
 .field{
-  margin: 10px 50px;
+  text-align: center;
+  margin: 10px;
+}
+.field_text{
+  white-space: nowrap;
+  font-size: 20px;
+  margin: 10px 60vw 0px 40vw;
 }
 
 .actions{
-  margin-bottom: 40px;
+  font-size: 50px;
+  height: 50px;
+  margin: 50px;
+  text-align: center;
 }
 
 .form__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
   font-size: 0.8em;
-  color: #fff;
+  color:  #055542;
   text-decoration: none;
   user-select: none;
-  background: #87CEFA;
+  background: #90c8e2;
   border: 1px #87CEFA solid;
   border-radius: 3px;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
