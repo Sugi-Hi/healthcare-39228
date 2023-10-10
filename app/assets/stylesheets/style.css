@@ -73,8 +73,12 @@ a {
 .nav__btn{
   display: inline-block;
   padding: 0.4em 1.6em;
+  margin: 20px;
+  height: 20px;
+  width: 40px
   font-size: 0.8em;
-  color: #0c6399;
+  color: #45adee;
+  background-color: #07410c;
   text-decoration: none;
   user-select: none;
   border: 1px #87CEFA solid;
