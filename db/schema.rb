@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_10_09_133249) do
+ActiveRecord::Schema.define(version: 2023_10_10_021358) do
+
+  create_table "healths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "stress", null: false
+    t.integer "stress_score", null: false
+    t.string "refresh", null: false
+    t.integer "refresh_score", null: false
+    t.integer "assess_id", null: false
+    t.integer "weight_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_healths_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
@@ -25,4 +38,5 @@ ActiveRecord::Schema.define(version: 2023_10_09_133249) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "healths", "users"
 end
