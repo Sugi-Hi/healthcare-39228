@@ -6,4 +6,7 @@ class User < ApplicationRecord
 
   validates :nickname , presence: true , length: { maximum: 10 }
 
+
+  has_many :healths
+
 end

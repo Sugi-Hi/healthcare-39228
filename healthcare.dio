@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="IiIE51ONClDgoYbZXVTl" name="ページ1">
-        <mxGraphModel dx="293" dy="524" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="247" dy="524" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <object label="" id="0">
                     <mxCell/>
@@ -74,7 +74,7 @@
                 <mxCell id="151" value="assess_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="92" vertex="1">
                     <mxGeometry y="160" width="90" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="150" value="wight_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="92" vertex="1">
+                <mxCell id="150" value="weight_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="92" vertex="1">
                     <mxGeometry y="190" width="90" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="149" value="user " style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="92" vertex="1">
