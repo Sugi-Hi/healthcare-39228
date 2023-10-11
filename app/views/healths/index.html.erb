@@ -1,0 +1,19 @@
+<main class="main">
+  <div class="inner">
+    <%= image_tag "healthbird.jpg" , class: "top-image" %>
+      <%# ログイン中はユーザー名を表示する %>
+      <% if user_signed_in? %>
+        <div class="greeting">
+          **+健康診断アプリへ+**大変な中、ご訪問頂きありがとうございます。<br>
+          <%= link_to "^*+#{current_user.nickname}さん+*^", "#" , class: "greeting__link" %><br>
+          +++ヘルスケアへようこそおいで下さいました！***
+        </div>
+      <% else %>
+      <% end %>
+
+      <div class="card__wrapper">
+        <%# 投稿機能実装後、健康診断自己チェックの回答一覧を表示する %>
+      </div>
+  </div>
+
+</main>

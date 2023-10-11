@@ -1,0 +1,445 @@
+TODO with the prefix, should I group by selector or property for weight savings?
+
+*{ 
+  box-sizing: border-box;
+}
+
+html{
+  color:#000;
+  background:#FFF;
+}
+
+/* リセットCSS */
+
+html,
+body,
+ul,
+li,
+dl,
+dt,
+dd,
+ol,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* ヘッダー */
+
+.header {
+  background-color: #f1f8fe;
+  margin-bottom: 48px;
+  padding: 20px 0;
+
+}
+.inner {
+  width: 1024px;
+  margin: 0 auto;
+}
+.top-image {
+  height: 70vh;
+  width: 100vw;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  height: 10vh;
+  width: 150px;
+  margin-left: 0px; 
+}
+.nav__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin: 20px;
+  height: 20px;
+  width: 90px;
+  font-size: 0.8em;
+  color: #45adee;
+  background-color: #07410c;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  text-align: center;
+}
+.nav__btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
+
+.nav__logout{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  margin: 20px;
+  height: 20px;
+  width: 90px;
+  font-size: 0.8em;
+  color: #45adee;
+  background-color: #07410c;
+  text-decoration: none;
+  user-select: none;
+  text-align: center;
+}
+.nav__logout:hover{
+  opacity: 0.5;
+}
+
+/* フォーム文頭 */
+.form__text {
+  width: 100%;
+  text-align: center;
+}
+
+/* フォーム周辺 */
+.form__wrapper{
+  min-height: calc(100vh - 500px);
+  flex-direction: column;
+  position: relative;
+  top:  10%; /* 画像の中央に配置するための調整 */
+  left: 50%; /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -100%); /* 画像の中央に配置するための調整 */
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+
+.field{
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+}
+.field_text{
+  white-space: nowrap;
+  align-items: center;
+  font-size: 20px;
+  margin: 10px 60vw 0px 40vw;
+}
+
+.actions{
+  font-size: 50px;
+  height: 50px;
+  margin: 50px;
+  text-align: center;
+}
+
+.form__btn{
+  display: inline-block;
+  padding: 0.4em 1.6em;
+  font-size: 0.8em;
+  color:  #055542;
+  text-decoration: none;
+  user-select: none;
+  background: #90c8e2;
+  border: 1px #87CEFA solid;
+  border-radius: 3px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 2px 0 rgba(0, 0, 0, 0.12);
+  transition: 0.2s ease;
+}
+
+.form__btn:hover {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2), 0 1px 8px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+/* メイン */
+
+.greeting{
+  position: absolute;
+  top: 30%; /* 画像の中央に配置するための調整 */
+  left: 45%; /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -50%); /* 画像の中央に配置するための調整 */
+  font-size: 25px;
+  color: #b02025;
+  background-color: rgba(255, 255, 255, 0.7); 
+  padding: 10px;
+}
+.greeting__link{
+  font-size: 30px;
+  color: #260843;
+  text-decoration: underline;
+}
+.page-heading {
+  font-size: 30px;
+  margin-bottom: 28px;
+}
+.card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: calc(100vh - 161px);
+}
+.card {
+  width: calc((100% - 50px) / 3);
+  margin-bottom: 40px;
+}
+.card__img {
+  margin-bottom: 16px;
+}
+.card__title {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.card__summary {
+  font-size: 16px;
+}
+.card__user {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  text-decoration: underline;
+}
+
+/* 詳細ページ */
+.health__wrapper{
+  min-height: calc(100vh - 161px);
+}
+.health__hedding{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.health__user{
+  display: block;
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+  text-decoration: underline;
+}
+.health__image{
+  width: 40%;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+.health__detail{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.detail__title{
+  font-size: 20px;
+  font-weight: bold;
+}
+.health__manage{
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+.health__btn{
+  display: block;
+  padding: 0.4em 1.6em;
+  font-size: 0.4em;
+  color: #999;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #999 solid;
+  border-radius: 3px;
+  transition: 0.4s ease;
+  margin: 0 4px;
+}
+.health__btn:hover{
+  color: #fff;
+  background: #999;
+}
+
+.health__comments{
+  background-color: #f6f6f6;
+  padding: 20px;
+  margin: 28px 0 40px 0;
+}
+
+.cares_lists{
+  padding-left: 20px;
+}
+
+.cares_list{
+  list-style-type: square;
+  padding-bottom: 5px;
+}
+
+.care_user{
+  font-size: 16px;
+  color: #999;
+  text-decoration: underline;
+}
+
+/* ユーザーページ */
+.user__wrapper{
+  min-height: calc(100vh - 161px);
+}
+.table{
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  width: 50%;
+}
+.table__col1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #f5f5f5;
+  width: 30%;
+  padding: 8px;
+}
+.table__col2{
+  text-align: left;
+  border: 1px solid #f5f5f5;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
+}
+.user__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+/* フッター */
+
+.footer {
+  background-color: #999;
+  padding: 10px 0;
+}
+.copyright {
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+}
+
+/* TODO think about hanlding inheritence differently, maybe letting IE6 fail a bit... */
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style:normal;
+  font-weight:normal;
+}
+
+input,
+textarea,
+select {
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:inherit;
+}
+/*to enable resizing for IE*/
+input,
+textarea,
+select {
+  *font-size: 100%;
+}
+/*because legend doesn't inherit in IE */
+legend {
+  color:#000;
+}
+
+/*
+  TODO remove settings on BODY since we can't namespace it.
+*/
+/*
+  TODO test putting a class on HEAD.
+      - Fails on FF.
+*/
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,
+img {
+  border:0;
+}
+
+/* YUI CSS Detection Stamp */
+#yui3-css-stamp.cssreset { display: none; }
+
+
+
+
+
+
+
+
+
+
+
+
+/* タブレット対応 */
+@media (max-width: 1024px) {
+  .inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .page-heading {
+    font-size: 24px;
+  }
+  .card {
+    width: 48%;
+    margin-bottom: 40px;
+  }
+  .health_image{
+    width: 60%;
+  }
+}
+
+ /* スマホ表示 */
+@media (max-width: 599px) {
+  .logo {
+    width: 120px;
+  }
+  .page-heading {
+    font-size: 20px;
+  }
+  .card {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+  .card__title {
+    font-size: 18px;
+  }
+  .card__summary {
+    font-size: 14px;
+  }
+  .health_image{
+    width: 100%;
+  }
+  .table{
+    width: 100%;
+  }
+}
