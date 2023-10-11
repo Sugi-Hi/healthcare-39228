@@ -61,7 +61,7 @@ a {
   margin: 0 auto;
 }
 .top-image {
-  height: 90vh;
+  height: 70vh;
   width: 100vw;
 }
 
@@ -121,12 +121,12 @@ a {
 
 /* フォーム周辺 */
 .form__wrapper{
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 500px);
   flex-direction: column;
   position: relative;
   top:  10%; /* 画像の中央に配置するための調整 */
   left: 50%; /* 画像の中央に配置するための調整 */
-  transform: translate(-50%, -50%); /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -100%); /* 画像の中央に配置するための調整 */
   background-color: rgba(255, 255, 255, 0.7); 
 }
 
@@ -137,6 +137,7 @@ a {
 }
 .field_text{
   white-space: nowrap;
+  align-items: center;
   font-size: 20px;
   margin: 10px 60vw 0px 40vw;
 }
@@ -220,27 +221,27 @@ a {
 }
 
 /* 詳細ページ */
-.prototype__wrapper{
+.health__wrapper{
   min-height: calc(100vh - 161px);
 }
-.prototype__hedding{
+.health__hedding{
   font-size: 24px;
   font-weight: bold;
   text-align: center;
 }
-.prototype__user{
+.health__user{
   display: block;
   font-size: 16px;
   color: #999;
   text-align: center;
   text-decoration: underline;
 }
-.prototype__image{
+.health__image{
   width: 40%;
   margin: 0 auto;
   padding: 16px 0;
 }
-.prototype__detail{
+.health__detail{
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -250,12 +251,12 @@ a {
   font-size: 20px;
   font-weight: bold;
 }
-.prototype__manage{
+.health__manage{
   display: flex;
   justify-content: center;
   padding-top: 16px;
 }
-.prototype__btn{
+.health__btn{
   display: block;
   padding: 0.4em 1.6em;
   font-size: 0.4em;
@@ -267,27 +268,27 @@ a {
   transition: 0.4s ease;
   margin: 0 4px;
 }
-.prototype__btn:hover{
+.health__btn:hover{
   color: #fff;
   background: #999;
 }
 
-.prototype__comments{
+.health__comments{
   background-color: #f6f6f6;
   padding: 20px;
   margin: 28px 0 40px 0;
 }
 
-.comments_lists{
+.cares_lists{
   padding-left: 20px;
 }
 
-.comments_list{
+.cares_list{
   list-style-type: square;
   padding-bottom: 5px;
 }
 
-.comment_user{
+.care_user{
   font-size: 16px;
   color: #999;
   text-decoration: underline;
@@ -361,7 +362,7 @@ select {
 input,
 textarea,
 select {
-  *font-size:100%;
+  *font-size: 100%;
 }
 /*because legend doesn't inherit in IE */
 legend {
@@ -412,7 +413,7 @@ img {
     width: 48%;
     margin-bottom: 40px;
   }
-  .prototype_image{
+  .health_image{
     width: 60%;
   }
 }
@@ -435,7 +436,7 @@ img {
   .card__summary {
     font-size: 14px;
   }
-  .prototype_image{
+  .health_image{
     width: 100%;
   }
   .table{
