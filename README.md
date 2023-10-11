@@ -28,7 +28,7 @@
 | refresh       | string     | null: false                    |
 | refresh_socre | integer    | null: false                    |
 | assess_id     | integer    | null: false                    |
-| wight_id      | integer    | null: false                    |
+| weight_id     | integer    | null: false                    |
 | user          | references | null: false, foreign_key: true |
 <!-- ・ストレス要因
 必須の合計点数(stress_score)も必須カラムとの前提です。
