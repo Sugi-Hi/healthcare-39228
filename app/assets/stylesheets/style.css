@@ -75,13 +75,20 @@ a {
   width: 150px;
   margin-left: 0px; 
 }
+.nav__left{
+}
+
+.nav__right{
+}
+
+
 .nav__btn{
   display: inline-block;
-  padding: 0.4em 1.6em;
-  margin: 20px;
-  height: 20px;
-  width: 90px;
-  font-size: 0.8em;
+  padding: 0.8em 1.6em;
+  margin: auto 20px;
+  height: 50px;
+  width: 150px;
+  font-size: 1.0em;
   color: #45adee;
   background-color: #07410c;
   text-decoration: none;
@@ -98,11 +105,11 @@ a {
 
 .nav__logout{
   display: inline-block;
-  padding: 0.4em 1.6em;
-  margin: 20px;
-  height: 20px;
-  width: 90px;
-  font-size: 0.8em;
+  padding: 0.8em 1.6em;
+  margin: auto 20px;
+  height: 50px;
+  width: 150px;
+  font-size: 1.0em;
   color: #45adee;
   background-color: #07410c;
   text-decoration: none;
