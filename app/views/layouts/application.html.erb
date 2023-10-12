@@ -15,17 +15,18 @@
     <header class="header">
       <div class="inner">
         <div class="nav">
+            <%# ヘルスケア象徴ロゴ：以下のイラスト絵マークでクリックするとトップページ戻る %>
           <div class="nav__left">
             <%= link_to image_tag("healthcare logo.png", class: :logo), root_path %>
           </div>
           
-      <%# ログインしているときの表示%>
+          <%# ログイン中：以下の表示%>
           <% if user_signed_in?  %>
             <div class="nav__right">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete , class: "nav__logout" %>
               <%= link_to "登録変更", edit_user_registration_path , class: "nav__btn" %>
             </div>
-      <%# ログインしていないときは以下を表示するようにしましょう %>
+          <%# ログアウト中 、以下の表示%>
           <% else %> 
             <div class="nav__right">
               <%= link_to "ログイン", new_user_session_path, class: "nav__btn" %>

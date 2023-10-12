@@ -450,3 +450,29 @@ img {
     width: 100%;
   }
 }
+
+
+/* 健康診断アイコン */
+.health-btn {
+  width: 155px;
+  height: 155px;
+  background: #57acce;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 100px;
+  left: 100px;
+  position: fixed;
+  padding: 15px;
+}
+
+.health-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 12px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.health-btn-icon {
+  width: 70%;
+}
