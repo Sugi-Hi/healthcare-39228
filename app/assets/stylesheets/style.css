@@ -194,7 +194,7 @@ a {
 }
 .page-heading {
   font-size: 30px;
-  margin-bottom: 28px;
+  margin-top: 28px;
 }
 .card__wrapper {
   display: flex;
@@ -227,64 +227,7 @@ a {
   text-decoration: underline;
 }
 
-/* 詳細ページ */
-.health__wrapper{
-  min-height: calc(100vh - 161px);
-}
-.health__hedding{
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-}
-.health__user{
-  display: block;
-  font-size: 16px;
-  color: #999;
-  text-align: center;
-  text-decoration: underline;
-}
-.health__image{
-  width: 40%;
-  margin: 0 auto;
-  padding: 16px 0;
-}
-.health__detail{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 8px;
-}
-.detail__title{
-  font-size: 20px;
-  font-weight: bold;
-}
-.health__manage{
-  display: flex;
-  justify-content: center;
-  padding-top: 16px;
-}
-.health__btn{
-  display: block;
-  padding: 0.4em 1.6em;
-  font-size: 0.4em;
-  color: #999;
-  text-decoration: none;
-  user-select: none;
-  border: 1px #999 solid;
-  border-radius: 3px;
-  transition: 0.4s ease;
-  margin: 0 4px;
-}
-.health__btn:hover{
-  color: #fff;
-  background: #999;
-}
 
-.health__comments{
-  background-color: #f6f6f6;
-  padding: 20px;
-  margin: 28px 0 40px 0;
-}
 
 .cares_lists{
   padding-left: 20px;

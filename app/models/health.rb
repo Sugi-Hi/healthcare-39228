@@ -14,7 +14,7 @@ class Health < ApplicationRecord
     validates :refresh_score , presence: true
   end
 
-  with_options presence: true , numericality: { other_than: 0, message: "must be other than 0" } do
+  with_options presence: true , numericality: {only_integer: true, other_than: 0, message: "must be other than 0" } do
     validates :assess_id  , presence: true
     validates :weight_id  , presence: true
   end

@@ -1,0 +1,284 @@
+<div class="health_inner">
+  <h2 class="form__text"> 健康診断自己チェックへの新規回答 </h2>
+
+
+      <%= form_with model: @health , class: "health__wrapper" , local: true do |f| %>
+
+        <div class="field">
+          <%= render "devise/shared/error_messages", resource: f.object %> 
+
+         <%# ストレス項目 %>
+          <%# ストレス事例 %>
+          <div class= "field__text"><hr>
+            <%= f.label :stress, "主なストレス事例" %><br />
+            <%= f.text_field :stress  , id:"health_stress"  %>
+          </div><br>
+
+          <div class="health__text">
+            <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　現状直面の度合/頻度</strong>
+            <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　優先順位</strong>
+          </div>
+          <%# ストレス要因フォームからの点数化 %>
+          <div class="health__text">
+            <em>・仕事が忙しすぎて、大変な責任ある担当を任されている負担度：　　　</em>
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>
+              <%= hardwork = 1 + @health.assess_id.to_i + @health.weight_id.to_i %>
+            </div>
+            <%= puts hardwork %>
+          </div>
+          <div class="health__text">
+            <em>・ギクシャクした人間関係で、解消し切れずため込んだストレス度：　　</em>
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>
+              <%= hardpersons = @health.assess_id.to_i * @health.weight_id.to_i %>
+
+            </div>
+            <%= puts hardpersons %>
+          </div>
+          <div class="health__text">
+            <em>・住居環境不良の生活で、騒音・汚染・迷惑行為などのストレス度：　　</em>
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>
+              <%= painfullife= @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts painfullife %>
+          </div> 
+          <div class="health__text">
+            <em>・支出が多くて貯金が貯まらず、家計が不安定から来るストレス度：　　</em>         
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>
+              <%= expense = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts expense %>
+          </div>  
+          <div class="health__text">
+            <em>・やらねばならない責任が多く、自由・娯楽など解消がないストレス度：</em>         
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>
+              <%= duty = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>              
+            </div>
+            <%= puts  %>
+          </div>
+          <div class="health__text">
+            <em>・頑張り過ぎて、休む暇が無く、疲労から中々回復しないストレス度：　</em>         
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>
+              <%= tired = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>            
+            </div>
+            <%= puts  %>
+          </div>  
+          <div class="health__text">
+            <em>・助け合える仲間がいなく、周りと協力が難しい孤立によるストレス度：</em>         
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>
+              <%= neglect = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts  %>
+          </div> 
+          <div class="health__text">
+            <em>・不安、プレッシャーなどからくる感覚過敏、神経質のストレス度：　　</em>         
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>
+              <%= nervous = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts  %>
+          </div> 
+
+          <% if hardwork !=0 || hardpersons !=0 && painfullife !=0 && expense !=0 && duty !=0 && tired !=0 && neglect !=0 && nervous !=0 %>
+              <%= stress_score = hardwork + hardpersons + painfullife + expense + duty + tired + neglect + nervous %>
+              <%= assess_id = (stress_score / 8 * 5).to_i %>
+              <%= weight_id = (stress_score / 8 * 3).to_i %>
+          <% end %>
+
+         <%# リフレッシュ項目 %>
+          <%# リフレッシュ事例 %>
+          <div class="field__text"><hr>
+            <%= f.label :refresh, "主なリフレッシュ事例" %><br />
+            <%= f.text_field :refresh,  id:"health_refresh" %>
+          </div><br>
+
+          <div class="health__text">
+            <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　直面する度合/頻度</strong>
+            <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　優先順位</strong>
+          </div>
+          <%# リフレッシュ習慣フォームからの点数化 %>
+          <div class="health__text">
+            <em>・仕事が忙しくても、やりがいあって自分に適した業務による満足度：　</em>
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>              
+              <%= goodjob = 1 + @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts goodjob %>
+          </div>
+          <div class="health__text">
+            <em>・円満な人間関係で、本音でも話し合えてうまく付き合えている満足度：</em>
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>              
+              <%= matchpersons = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts matchpersons %>
+          </div>          
+          <div class="health__text">
+            <em>・住居環境も良く、周辺も静音・清浄・安定した生活でのリラックス度：</em>
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>              
+              <%= happylife = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts happylife %>
+          </div>          
+          <div class="health__text">
+            <em>・収入も多めで、貯金、投資も十分できる家計、買物も安心して充実度：</em>
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>              
+              <%= happylife = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts happylife %>
+          </div> 
+          <div class="health__text">
+            <em>・趣味が多く、たまったストレスなど辛さを解消できるリフレッシュ度：</em>
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>              
+              <%= happylife = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts happylife %>
+          </div>
+          <div class="health__text">
+            <em>・安眠、スッキリした目覚めで何事にも元気に取り組める活動の充実度：</em>
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>              
+              <%= happylife = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts happylife %>
+          </div>           
+          <div class="health__text">
+            <em>・周りに協力的に話し合える仲間で、問題でも共同で対処できる好感度：</em>
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>              
+              <%= happylife = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts @happylife %>
+          </div>     
+          <div class="health__text">
+            <em>・セキュリティ対策も十分整っていて、緊急事態でも安心感ある安定度：</em>
+            <div class="health__box">
+              <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
+              <%= f.collection_select(:assess_id, Assess.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 3段階評価(1.不問～3.重要) %>
+              <%= f.collection_select(:weight_id, Weight.all, :id, :name, {}, {class: "form__score"}) %>
+              <%# 点数化 %>              
+              <%= happylife = @health.assess_id.to_i * @health.weight_id.to_i %>
+              <%= assess_id = 0 %>
+              <%= weight_id = 0 %>
+            </div>
+            <%= puts happylife %>
+          </div>     
+         <% if goodjob !=0 || hardpersons !=0 && painfullife !=0 && expense !=0 && duty !=0 && tired !=0 && neglect !=0 && nervous !=0 %>
+              <%= refresh_score = goodjob %>  
+              <%= assess_id = (refresh_score / 8 * 5).to_i %>
+              <%= weight_id = (refresh_score / 8 * 3).to_i %>
+          <% end %> 
+
+          <hr>
+          <div class= "field__text">
+            <%= f.label :image, "健康診断の画像" %><br />
+            <%= f.file_field :image , id:"health_image"   %>
+          </div>
+        </div>
+
+        
+
+
+        <div class="actions">
+          <%= f.submit "回答の総合結果を記録・共有する", class: :form__btn  %>
+        </div><br>
+        
+      <% end %>
+
+</div>
