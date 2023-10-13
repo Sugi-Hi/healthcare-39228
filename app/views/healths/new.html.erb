@@ -1,18 +1,18 @@
 <div class="health_inner">
-  <h2 class="form__text"> 健康診断自己チェックへの新規回答 </h2>
-
+    <h2 class="form__text"> 健康診断自己チェックへの新規回答 </h2>
+        
+        <%= image_tag "伊吹山.jpg" , class: "health-image" %>
 
       <%= form_with model: @health , class: "health__wrapper" , local: true do |f| %>
-
         <div class="field">
           <%= render "devise/shared/error_messages", resource: f.object %> 
 
          <%# ストレス項目 %>
           <%# ストレス事例 %>
-          <div class= "field__text"><hr>
+          <div class= "field__text">
             <%= f.label :stress, "〇主なストレス事例" %><br />
             <%= f.text_field :stress  , id:"health_stress"  %>
-          </div><br>
+          </div>
 
           <div class="health__text">
             <strong class="health__box" >
@@ -110,7 +110,7 @@
           <div class="field__text"><hr>
             <%= f.label :refresh, "〇主なリフレッシュ事例" %><br />
             <%= f.text_field :refresh,  id:"health_refresh" %>
-          </div><br>
+          </div>
 
           <div class="health__text">
             <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　現状直面の度合/頻度</strong>
@@ -207,10 +207,12 @@
           </div>
         </div>
 
+
         <div class="actions">
           <%= f.submit "回答の総合結果を記録・共有する", class: :form__btn  %>
         </div><br>
         
-      <% end %>
+    <% end %>
+
 
 </div>
