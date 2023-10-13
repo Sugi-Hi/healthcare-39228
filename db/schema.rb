@@ -35,11 +35,25 @@ ActiveRecord::Schema.define(version: 2023_10_12_063158) do
 
   create_table "healths", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "stress", null: false
-    t.integer "stress_score", null: false
     t.string "refresh", null: false
-    t.integer "refresh_score", null: false
-    t.integer "assess_id", null: false
-    t.integer "weight_id", null: false
+    t.integer "stressdoa_id", null: false
+    t.integer "stressdob_id", null: false
+    t.integer "stressdoc_id", null: false
+    t.integer "stressdod_id", null: false
+    t.integer "stressfeela_id", null: false
+    t.integer "stressfeelb_id", null: false
+    t.integer "stressfeelc_id", null: false
+    t.integer "stressfeeld_id", null: false
+    t.integer "stressweight_id", null: false
+    t.integer "refreshdoa_id", null: false
+    t.integer "refreshdob_id", null: false
+    t.integer "refreshdoc_id", null: false
+    t.integer "refreshdod_id", null: false
+    t.integer "refreshfeela_id", null: false
+    t.integer "refreshfeelb_id", null: false
+    t.integer "refreshfeelc_id", null: false
+    t.integer "refreshfeeld_id", null: false
+    t.integer "refreshweight_id", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

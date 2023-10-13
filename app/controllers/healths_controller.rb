@@ -22,7 +22,14 @@ class HealthsController < ApplicationController
   private
 
   def health_params
-    params.require(:health).permit(:stress , :stress_score , :refresh , :refresh_score ,:assess_id , :weight_id , :image).merge(user_id: current_user.id)
+    params.require(:health).permit(:stress , :stressdoa_id , :stressdob_id ,:stressdoc_id ,:stressdod_id ,
+                                   :stressfeela_id , :stressfeelb_id ,:stressfeelc_id ,:stressfeeld_id ,:stressweight_id , 
+                                   :refresh , :refreshdoa_id , :refreshdob_id ,:refreshdoc_id ,:refreshdod_id ,
+                                   :refreshfeela_id , :refreshfeelb_id , :refreshfeelc_id , :refreshfeeld_id , :refreshweight_id , 
+                                   :image).merge(user_id: current_user.id)
+  
+  
+  
   end
 
 end
