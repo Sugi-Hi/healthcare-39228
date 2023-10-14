@@ -9,7 +9,7 @@
          <%# ストレス項目 %>
           <%# ストレス事例 %>
           <div class= "field__text">
-            <%= f.label :stress, "〇主なストレス事例" %><br />
+            <%= f.label :stress, "◇主なストレス事例" %><br />
             <%= f.text_field :stress  , id:"health_stress"  %>
           </div>
 
@@ -110,7 +110,7 @@
 
           <div class="health__text">
             <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　現状直面の度合/頻度</strong>
-            <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　◇リフレッシュ：優先順位
+            <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　〇リフレッシュ：優先順位
             <%# 3段階評価(1.不問～3.重要) %>
             <%= f.collection_select(:refreshweight_id, Refreshweight.all, :id, :name, {}, {class: "form__score"}) %>
             </strong>
