@@ -6,14 +6,15 @@
     <title>Healthcare39228</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="http://localhost:3000/javascript/health_score.js"></script>
+    <%= stylesheet_link_tag 'application', media: 'all'  %>
+    <%= javascript_pack_tag 'application' %>
+    <%# <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap" rel="stylesheet"> %>
   </head>
 
   <body>
     <header class="header">
-      <div class="inner">
+      <div class="head__inner">
         <div class="nav">
             <%# ヘルスケア象徴ロゴ：以下のイラスト絵マークでクリックするとトップページ戻る %>
           <div class="nav__left">
