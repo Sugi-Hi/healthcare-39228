@@ -42,8 +42,10 @@
               <%= image_tag  '健康医療チェック.jpeg' , class: "healthcard__img" %>
             <% end %>
             <div class="main__title">
-              <%= health.stress  %>⇒ <%= @stress_score %><span><span id='add-stress-score'></span>点</span><br>
-              <%= health.refresh %>⇒ <%= @refresh_score %><span><span id='add-refresh-score'></span>点</span> <br>
+              ◇<%= health.stress  %><br>
+              ◇ストレス総合点：<%= @stress_score = ( health.stressdoa_id.to_i + health.stressdob_id.to_i + health.stressdoc_id.to_i + health.stressdod_id.to_i + health.stressfeela_id.to_i + health.stressfeelb_id.to_i + health.stressfeelc_id.to_i + health.stressfeeld_id.to_i ) * health.stressweight_id.to_i %>点<hr>
+              〇<%= health.refresh %><br>
+              〇リフレッシュ総合点：<%= @refresh_score = ( health.refreshdoa_id.to_i + health.refreshdob_id.to_i + health.refreshdoc_id.to_i + health.refreshdod_id.to_i + health.refreshfeela_id.to_i + health.refreshfeelb_id.to_i + health.refreshfeelc_id.to_i + health.refreshfeeld_id.to_i ) * health.refreshweight_id.to_i %>点<hr>
             </div>
           <% end %>
       <% end %>
