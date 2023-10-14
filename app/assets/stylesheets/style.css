@@ -177,17 +177,18 @@ a {
 
 /* メイン */
 
-.greeting{
+.greet{
   position: absolute;
   top: 30%; /* 画像の中央に配置するための調整 */
   left: 45%; /* 画像の中央に配置するための調整 */
+  width: 60%;
   transform: translate(-50%, -50%); /* 画像の中央に配置するための調整 */
   font-size: 25px;
   color: #b02025;
   background-color: rgba(255, 255, 255, 0.7); 
   padding: 10px;
 }
-.greeting__link{
+.greet__link{
   font-size: 30px;
   color: #260843;
   text-decoration: underline;

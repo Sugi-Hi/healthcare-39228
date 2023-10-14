@@ -3,9 +3,9 @@
     <%= image_tag "healthbird.jpg" , class: "top-image" %>
       <%# ログイン中はユーザー名を表示する %>
       <% if user_signed_in? %>
-        <div class="greeting">
+        <div class="greet">
           **+健康診断アプリへ+**大変な中、ご訪問頂きありがとうございます。<br>
-          <%= link_to "^*+#{current_user.nickname}さん+*^", "#" , class: "greeting__link" %><br>
+          <%= link_to "^*+#{current_user.nickname}さん+*^", "#" , class: "greet__link" %><br>
           +++ヘルスケアへようこそおいで下さいました！***
         </div>
       <% else %>
@@ -29,9 +29,20 @@
     <% end %>
 
   </div>
-      <div class="card__wrapper">
-        <%# 投稿機能実装後、健康診断自己チェックの回答一覧を下記の表示 %>
-      </div>
+  
+  <div class="card__wrapper">
+        <%# 回答(投稿)機能実装後、健康診断自己チェックの回答一覧を下記の表示 %>
+    <div class="card">
+      <% @healths.each do |health| %>
+        <% if health.image.attached? %>
+          <%= image_tag  health.image , class: "health__image" %>
+        <% else %>
+          <%= image_tag  'natural.png' , class: "health__image" %>
+        <% end %>
+      <% end %>
+
+    </div>
+  </div>
  
 
 </main>
