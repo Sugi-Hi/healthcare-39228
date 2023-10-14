@@ -46,7 +46,6 @@
 }
 .health_error{
   text-align: center;
-  font-size: 10px;
 }
 
 
@@ -61,15 +60,6 @@
   background-color: rgba(255, 255, 255, 0.7); 
 }
 
-/* 一覧ページ */
-
-
-.health__image{
-  width: 5vw;
-  height: 5vh;
-  margin: 0 auto;
-  padding: 16px 0;
-}
 
 
 /* 詳細ページ */

@@ -28,21 +28,29 @@
 
     <% end %>
 
-  </div>
   
-  <div class="card__wrapper">
-        <%# 回答(投稿)機能実装後、健康診断自己チェックの回答一覧を下記の表示 %>
-    <div class="card">
-      <% @healths.each do |health| %>
-        <% if health.image.attached? %>
-          <%= image_tag  health.image , class: "health__image" %>
-        <% else %>
-          <%= image_tag  'natural.png' , class: "health__image" %>
-        <% end %>
+    <div class="healths__wrapper">
+          <%# 回答(投稿)機能実装後、健康診断自己チェックの回答一覧を下記の表示 %>
+      <div class="healths">
+        <% @healths.each do |health| %>
+          <%= link_to( "#" ) do %>
+            <%# 健康診断自己チェックで選択した画像 %>
+            <% if health.image.attached? %>
+              <%= image_tag  health.image , class: "healthcard__img" %>
+            <%# 画像選択してない場合は、初期画像 %>
+            <% else %>
+              <%= image_tag  '健康医療チェック.jpeg' , class: "healthcard__img" %>
+            <% end %>
+            <div class="main__title">
+              <%= health.stress  %>⇒ <%= @stress_score %><span><span id='add-stress-score'></span>点</span><br>
+              <%= health.refresh %>⇒ <%= @refresh_score %><span><span id='add-refresh-score'></span>点</span> <br>
+            </div>
+          <% end %>
       <% end %>
 
+      </div>
     </div>
   </div>
- 
+
 
 </main>
