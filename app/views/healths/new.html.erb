@@ -97,14 +97,11 @@
               <%= nervous = @health.stressfeeld_id.to_i * @health.stressweight_id.to_i %>
             </div>
           </div> 
-          
-          <%= @stress_score = hardwork + hardpersons + painfullife + loss + duty + tired + neglect + nervous %><br>
 
-          <% if hardwork !=0 && hardpersons !=0 && painfullife !=0 && loss !=0 && duty !=0 && tired !=0 && neglect !=0 && nervous !=0 %>
+          <%# ストレス総合得点 %>
+          <span id="stress-score"><%= @stress_score = hardwork + hardpersons + painfullife + loss + duty + tired + neglect + nervous %></span><br>
 
-          <% end %>
-
-         <%# リフレッシュ項目 %>
+          <%# リフレッシュ項目 %>
           <%# リフレッシュ事例 %>
           <div class="field__text"><hr>
             <%= f.label :refresh, "〇主なリフレッシュ事例" %><br />
@@ -194,11 +191,9 @@
             </div>
           </div>     
 
-          <%= @refresh_score = goodjob + matchpersons + happylife + profit + hobby + energy + support + safely %> 
+          <%# リフレッシュ総合得点 %>
+          <span id="refresh-score"><%= @refresh_score = goodjob + matchpersons + happylife + profit + hobby + energy + support + safely %> </span>
 
-          <% if goodjob !=0 || matchpersons !=0 && happylife !=0 && profit !=0 && hobby !=0 && energy !=0 && support !=0 && safely !=0 %>
-          <% end %> 
- 
           <hr>
           <div class= "field__text">
             <%= f.label :image, "健康診断の画像" %><br />
