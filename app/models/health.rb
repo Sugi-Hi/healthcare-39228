@@ -35,7 +35,7 @@ class Health < ApplicationRecord
     validates :stressdoa_id
     validates :stressdob_id  
     validates :stressdoc_id  
-    validates :stressdod_id  
+    validates :stressdod_id 
     validates :stressfeela_id  
     validates :stressfeelb_id  
     validates :stressfeelc_id  
@@ -44,7 +44,7 @@ class Health < ApplicationRecord
 
     validates :refreshdoa_id  
     validates :refreshdob_id  
-    validates :refreshdoc_id  
+    validates :refreshdoc_id 
     validates :refreshdod_id  
     validates :refreshfeela_id  
     validates :refreshfeelb_id  

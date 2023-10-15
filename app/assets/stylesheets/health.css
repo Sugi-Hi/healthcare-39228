@@ -5,6 +5,7 @@
 /* フォーム文頭 */
 .health_inner {
   width: 1024px;
+  height: 2500px;
   margin: auto;
 }
 .health_hedding{
@@ -13,9 +14,9 @@
   text-align: center;
 }
 
-.health__image{
+.healthnew__image{
   width: 90vw;
-  height: 100vh;
+  height: 1000px;
   margin: 0 auto;
   padding: 16px 0;
 }
@@ -39,10 +40,21 @@
   text-align: left;
 }
 
+.health_field{
+  text-align: center;
+  margin: 50px;
+}
+.health_error{
+  text-align: center;
+}
+
+
+/* 健康診断自己チェックの選択フォーム欄 */
 .health__wrapper{
+  height: 2000px;
   flex-direction: column;
   position: relative;
-  top:  40%; /* 画像の中央に配置するための調整 */
+  top:  25%; /* 画像の中央に配置するための調整 */
   left: 50%; /* 画像の中央に配置するための調整 */
   transform: translate(-50%, -70%); /* 画像の中央に配置するための調整 */
   background-color: rgba(255, 255, 255, 0.7); 

@@ -3,9 +3,9 @@
     <%= image_tag "healthbird.jpg" , class: "top-image" %>
       <%# ログイン中はユーザー名を表示する %>
       <% if user_signed_in? %>
-        <div class="greeting">
+        <div class="greet">
           **+健康診断アプリへ+**大変な中、ご訪問頂きありがとうございます。<br>
-          <%= link_to "^*+#{current_user.nickname}さん+*^", "#" , class: "greeting__link" %><br>
+          <%= link_to "^*+#{current_user.nickname}さん+*^", "#" , class: "greet__link" %><br>
           +++ヘルスケアへようこそおいで下さいました！***
         </div>
       <% else %>
@@ -28,10 +28,31 @@
 
     <% end %>
 
-  </div>
-      <div class="card__wrapper">
-        <%# 投稿機能実装後、健康診断自己チェックの回答一覧を下記の表示 %>
+  
+    <div class="healths__wrapper">
+          <%# 回答(投稿)機能実装後、健康診断自己チェックの回答一覧を下記の表示 %>
+      <div class="healths">
+        <% @healths.each do |health| %>
+          <%= link_to( "#" ) do %>
+            <%# 健康診断自己チェックで選択した画像 %>
+            <% if health.image.attached? %>
+              <%= image_tag  health.image , class: "healthcard__img" %>
+            <%# 画像選択してない場合は、初期画像 %>
+            <% else %>
+              <%= image_tag  '健康医療チェック.jpeg' , class: "healthcard__img" %>
+            <% end %>
+            <div class="main__title">
+              ◇<%= health.stress  %><br>
+              ◇ストレス総合点：<%= @stress_score = ( health.stressdoa_id.to_i + health.stressdob_id.to_i + health.stressdoc_id.to_i + health.stressdod_id.to_i + health.stressfeela_id.to_i + health.stressfeelb_id.to_i + health.stressfeelc_id.to_i + health.stressfeeld_id.to_i ) * health.stressweight_id.to_i %>点<hr>
+              〇<%= health.refresh %><br>
+              〇リフレッシュ総合点：<%= @refresh_score = ( health.refreshdoa_id.to_i + health.refreshdob_id.to_i + health.refreshdoc_id.to_i + health.refreshdod_id.to_i + health.refreshfeela_id.to_i + health.refreshfeelb_id.to_i + health.refreshfeelc_id.to_i + health.refreshfeeld_id.to_i ) * health.refreshweight_id.to_i %>点<hr>
+            </div>
+          <% end %>
+      <% end %>
+
       </div>
- 
+    </div>
+  </div>
+
 
 </main>

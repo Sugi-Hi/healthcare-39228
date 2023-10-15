@@ -1,16 +1,15 @@
 <div class="health_inner">
     <h2 class="form__text"> 健康診断自己チェックへの新規回答 </h2>
         
-        <%= image_tag "伊吹山.jpg" , class: "health-image" %>
+        <%= image_tag "伊吹山.jpg" , class: "healthnew-image" %>
 
       <%= form_with model: @health , class: "health__wrapper" , local: true do |f| %>
         <div class="field">
-          <%= render "devise/shared/error_messages", resource: f.object %> 
 
          <%# ストレス項目 %>
           <%# ストレス事例 %>
           <div class= "field__text">
-            <%= f.label :stress, "〇主なストレス事例" %><br />
+            <%= f.label :stress, "◇主なストレス事例" %><br />
             <%= f.text_field :stress  , id:"health_stress"  %>
           </div>
 
@@ -98,14 +97,11 @@
               <%= nervous = @health.stressfeeld_id.to_i * @health.stressweight_id.to_i %>
             </div>
           </div> 
-          
-          <%= @stress_score = hardwork + hardpersons + painfullife + loss + duty + tired + neglect + nervous %><br>
 
-          <% if hardwork !=0 && hardpersons !=0 && painfullife !=0 && loss !=0 && duty !=0 && tired !=0 && neglect !=0 && nervous !=0 %>
+          <%# ストレス総合得点 %>
+          <span id="stress-score"><%= @stress_score = hardwork + hardpersons + painfullife + loss + duty + tired + neglect + nervous %></span><br>
 
-          <% end %>
-
-         <%# リフレッシュ項目 %>
+          <%# リフレッシュ項目 %>
           <%# リフレッシュ事例 %>
           <div class="field__text"><hr>
             <%= f.label :refresh, "〇主なリフレッシュ事例" %><br />
@@ -114,7 +110,7 @@
 
           <div class="health__text">
             <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　現状直面の度合/頻度</strong>
-            <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　◇リフレッシュ：優先順位
+            <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　〇リフレッシュ：優先順位
             <%# 3段階評価(1.不問～3.重要) %>
             <%= f.collection_select(:refreshweight_id, Refreshweight.all, :id, :name, {}, {class: "form__score"}) %>
             </strong>
@@ -195,11 +191,9 @@
             </div>
           </div>     
 
-          <%= @refresh_score = goodjob + matchpersons + happylife + profit + hobby + energy + support + safely %> 
+          <%# リフレッシュ総合得点 %>
+          <span id="refresh-score"><%= @refresh_score = goodjob + matchpersons + happylife + profit + hobby + energy + support + safely %> </span>
 
-          <% if goodjob !=0 || matchpersons !=0 && happylife !=0 && profit !=0 && hobby !=0 && energy !=0 && support !=0 && safely !=0 %>
-          <% end %> 
- 
           <hr>
           <div class= "field__text">
             <%= f.label :image, "健康診断の画像" %><br />
@@ -210,9 +204,13 @@
 
         <div class="actions">
           <%= f.submit "回答の総合結果を記録・共有する", class: :form__btn  %>
+     
         </div><br>
-        
-    <% end %>
 
+        <div class="health_field">
+             <%# エラーメッセージ表示 %>
+          <%= render "devise/shared/error_messages", resource: f.object , class: "health_error" %> 
+        </div>
+    <% end %>
 
 </div>
