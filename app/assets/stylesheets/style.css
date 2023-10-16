@@ -119,8 +119,37 @@ a {
 .nav__logout:hover{
   opacity: 0.5;
 }
+/* ユーザー管理 */
+.user__field{
+  text-align: center;
+  align-items: center;
+  padding: 100px;
+  height: 40vh;
+}
 
-/* フォーム文頭 */
+.form__wrapper{
+  height: 60vh;
+  flex-direction: column;
+  position: relative;
+  top:  30%; /* 画像の中央に配置するための調整 */
+  left: 50%; /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -50%); /* 画像の中央に配置するための調整 */
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+
+.user-image {
+  position: relative;
+  top: 20%; /* 画像の中央に配置するための調整 */
+  left: 10%; /* 画像の中央に配置するための調整 */
+  height: 70vh;
+  width: 80%;
+}
+.error{
+  text-align: center;
+}
+
+
+/* ページ文頭 */
 .form__text {
   width: 100%;
   text-align: center;
@@ -141,16 +170,12 @@ a {
 }
 
 
-
-
-
-
-/* フォーム周辺 */
+/* 入力フォーム周辺 */
 .form__wrapper{
   min-height: calc(100vh - 500px);
   flex-direction: column;
   position: relative;
-  top:  10%; /* 画像の中央に配置するための調整 */
+  top: 10%; /* 画像の中央に配置するための調整 */
   left: 50%; /* 画像の中央に配置するための調整 */
   transform: translate(-50%, -100%); /* 画像の中央に配置するための調整 */
   background-color: rgba(255, 255, 255, 0.7); 
@@ -159,6 +184,7 @@ a {
 .field{
   text-align: center;
   align-items: center;
+  height: 2000px;
   margin: 10px;
 }
 .field_text{
@@ -221,6 +247,7 @@ a {
 
 .healths__wrapper {
   min-height: calc(100vh - 100px);
+  height: 1000px;
   position: relative;
   top:  40%; /* 画像の中央に配置するための調整 */
   left: 50%; /* 画像の中央に配置するための調整 */
@@ -282,7 +309,7 @@ a {
 }
 
 /* ユーザーページ */
-.user__wrapper{
+.users__wrapper{
   min-height: calc(100vh - 161px);
 }
 .table{
