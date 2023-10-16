@@ -28,10 +28,9 @@
 
     <% end %>
 
-  
     <div class="healths__wrapper">
-          <%# 回答(投稿)機能実装後、健康診断自己チェックの回答一覧を下記の表示 %>
       <div class="healths">
+       <%# 回答(投稿)機能実装後、健康診断自己チェックの回答一覧を下記の表示 %>
         <% @healths.each do |health| %>
           <%= link_to( "#" ) do %>
             <%# 健康診断自己チェックで選択した画像 %>
@@ -41,14 +40,14 @@
             <% else %>
               <%= image_tag  '健康医療チェック.jpeg' , class: "healthcard__img" %>
             <% end %>
-            <div class="main__title">
+            <div class="main__assess">
               ◇<%= health.stress  %><br>
               ◇ストレス総合点：<%= @stress_score = ( health.stressdoa_id.to_i + health.stressdob_id.to_i + health.stressdoc_id.to_i + health.stressdod_id.to_i + health.stressfeela_id.to_i + health.stressfeelb_id.to_i + health.stressfeelc_id.to_i + health.stressfeeld_id.to_i ) * health.stressweight_id.to_i %>点<hr>
               〇<%= health.refresh %><br>
               〇リフレッシュ総合点：<%= @refresh_score = ( health.refreshdoa_id.to_i + health.refreshdob_id.to_i + health.refreshdoc_id.to_i + health.refreshdod_id.to_i + health.refreshfeela_id.to_i + health.refreshfeelb_id.to_i + health.refreshfeelc_id.to_i + health.refreshfeeld_id.to_i ) * health.refreshweight_id.to_i %>点<hr>
             </div>
           <% end %>
-      <% end %>
+        <% end %>
 
       </div>
     </div>

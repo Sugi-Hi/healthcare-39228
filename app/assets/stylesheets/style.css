@@ -252,8 +252,8 @@ a {
   top:  40%; /* 画像の中央に配置するための調整 */
   left: 50%; /* 画像の中央に配置するための調整 */
   transform: translate(-50%, -50%); /* 画像の中央に配置するための調整 */
-  display: flex;
   flex-wrap: wrap;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -272,10 +272,9 @@ a {
   width: 200px;
   height: 170px;
   margin: 10px 10px;
-  padding: 0px;
   margin-bottom: 16px;
 }
-.main__title {
+.main__assess {
   font-size: 15px;
   margin-bottom: 0px;
   font-weight: bold;
@@ -289,6 +288,9 @@ a {
   color: #999;
   text-align: right;
   text-decoration: underline;
+}
+.index{
+  text-align: center;
 }
 
 
