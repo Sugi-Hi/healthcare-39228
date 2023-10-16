@@ -245,7 +245,7 @@ a {
 
 /* 診断結果の一覧表示 */
 
-.healths__wrapper {
+.allhealths__wrapper {
   min-height: calc(100vh - 100px);
   height: 1000px;
   position: relative;
