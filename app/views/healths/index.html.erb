@@ -17,28 +17,28 @@
     <% if user_signed_in? %>
       <%= link_to(new_health_path, class: 'health-btn') do %>
         <span class='health-btn-text'>健康診断へ<br>回答する</span>
-        <%= image_tag '健康自己チェック.jpeg' , size: '200x100' ,class: "health-btn-icon" %>
+        <%= image_tag "健康自己チェック.jpg" , size: '200x100' ,class: "health-btn-icon" %>
       <% end %>
     <%# ログアウト中は、ログイン画面に移動 %>
     <% else %>
       <%= link_to(new_user_session_path, class: 'health-btn') do %>
         <span class='health-btn-text'>健康診断へ<br>回答する</span>
-        <%= image_tag '健康自己チェック.jpeg' , size: '200x100' ,class: "health-btn-icon" %>
+        <%= image_tag "健康自己チェック.jpg" , size: '200x100' ,class: "health-btn-icon" %>
       <% end %>
 
     <% end %>
 
-    <div class="healths__wrapper">
+    <div class="allhealths__wrapper">
       <div class="healths">
        <%# 回答(投稿)機能実装後、健康診断自己チェックの回答一覧を下記の表示 %>
         <% @healths.each do |health| %>
-          <%= link_to( "#" ) do %>
+          <%= link_to( health_path(health) ) do %>
             <%# 健康診断自己チェックで選択した画像 %>
             <% if health.image.attached? %>
               <%= image_tag  health.image , class: "healthcard__img" %>
             <%# 画像選択してない場合は、初期画像 %>
             <% else %>
-              <%= image_tag  '健康医療チェック.jpeg' , class: "healthcard__img" %>
+              <%= image_tag  '健康医療チェック.jpg' , class: "healthcard__img" %>
             <% end %>
             <div class="main__assess">
               ◇<%= health.stress  %><br>
