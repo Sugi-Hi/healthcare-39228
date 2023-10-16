@@ -28,15 +28,29 @@ Health Care
 
 ## healths(健康診断の回答機能) Table
 
-| Column        | Type       | Options                        |
-| ------------- | ---------- | ------------------------------ |
-| stress        | string     | null: false                    |
-| stress_socre  | integer    | null: false                    |
-| refresh       | string     | null: false                    |
-| refresh_socre | integer    | null: false                    |
-| assess_id     | integer    | null: false                    |
-| weight_id     | integer    | null: false                    |
-| user          | references | null: false, foreign_key: true |
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| stress           | string     | null: false                    |
+| stressdoa_id     | integer    | null: false                    |
+| stressdob_id     | integer    | null: false                    |
+| stressdoc_id     | integer    | null: false                    |
+| stressdod_id     | integer    | null: false                    |
+| stressfeela_id   | integer    | null: false                    |
+| stressfeelb_id   | integer    | null: false                    |
+| stressfeelc_id   | integer    | null: false                    |
+| stressfelld_id   | integer    | null: false                    |
+| stressweight_id  | integer    | null: false                    |
+| refresh          | string     | null: false                    |
+| refreshdoa_id    | integer    | null: false                    |
+| refreshdob_id    | integer    | null: false                    |
+| refreshdoc_id    | integer    | null: false                    |
+| refreshdod_id    | integer    | null: false                    |
+| refreshfeela_id  | integer    | null: false                    |
+| refreshfeelb_id  | integer    | null: false                    |
+| refreshfeelc_id  | integer    | null: false                    |
+| refreshfeeld_id  | integer    | null: false                    |
+| refreshweight_id | integer    | null: false                    |
+| user             | references | null: false, foreign_key: true |
 <!-- ・ストレス要因
 必須の合計点数(stress_score)も必須カラムとの前提です。
 各ストレス要因の点数は計8変数(hardwork,hardpersons,painfullife,expense,duty,tired,neglect,nervous)使用されます。 -->
