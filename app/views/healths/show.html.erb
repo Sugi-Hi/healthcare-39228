@@ -1,0 +1,107 @@
+<div class="health_inner">
+  <h1 class="form__text"> 回答結果の詳細・データ分析</h1>
+
+    <%= image_tag "琵琶湖虹.jpg" , class: "healthnew__image" %>
+
+  <div class="health__table">
+    <table class="detail-table" >
+      <tbody>
+        <tr class="title-border">
+          <th class="health-detail"> ストレス要因</th>
+          <td class="detail-value"><%= @health.stress %></td>
+        </tr>
+        <tr>
+          <th class="health-detail">業務労働</th>
+          <td class="detail-value"><%= @health.stressdoa_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">人間関係</th>
+          <td class="detail-value"><%= @health.stressdob_id%>点</td>
+        </tr>       
+         <tr>
+          <th class="health-detail">住居環境</th>
+          <td class="detail-value"><%= @health.stressdoc_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">損失</th>
+          <td class="detail-value"><%= @health.stressdod_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">責任</th>
+          <td class="detail-value"><%= @health.stressfeela_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">疲労</th>
+          <td class="detail-value"><%= @health.stressfeelb_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">孤立</th>
+          <td class="detail-value"><%= @health.stressfeelc_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">不安</th>
+          <td class="detail-value"><%= @health.stressfeeld_id%>点</td>
+        </tr> 
+        <tr class="weight-value">
+          <th class="health-detail"> ストレス優先順位</th>
+          <td class="detail-value">ランク<%= @health.stressweight_id %></td>
+        </tr>
+        <tr class="title-border">
+          <th class="health-detail"> ストレス総合点数</th>
+          <td class="detail-value"><%= ( @health.stressdoa_id.to_i + @health.stressdob_id.to_i + @health.stressdoc_id.to_i + @health.stressdod_id.to_i + @health.stressfeela_id.to_i + @health.stressfeelb_id.to_i + @health.stressfeelc_id.to_i + @health.stressfeeld_id.to_i ) * @health.stressweight_id.to_i %>点</td>
+        </tr>        
+      </tbody> 
+    </table>
+
+    <table class="detail-table" >
+      <tbody>
+        <tr class="title-border">
+          <th class="health-detail"> リフレッシュ習慣</th>
+          <td class="detail-value"><%= @health.refresh %></td>
+        </tr>
+        <tr>
+          <th class="health-detail">仕事</th>
+          <td class="detail-value"><%= @health.refreshdoa_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">人脈</th>
+          <td class="detail-value"><%= @health.refreshdob_id%>点</td>
+        </tr>       
+         <tr>
+          <th class="health-detail">生活環境</th>
+          <td class="detail-value"><%= @health.refreshdoc_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">利益</th>
+          <td class="detail-value"><%= @health.refreshdod_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">趣味</th>
+          <td class="detail-value"><%= @health.refreshfeela_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">元気</th>
+          <td class="detail-value"><%= @health.refreshfeelb_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">仲間</th>
+          <td class="detail-value"><%= @health.refreshfeelc_id%>点</td>
+        </tr>
+        <tr>
+          <th class="health-detail">安心</th>
+          <td class="detail-value"><%= @health.refreshfeeld_id%>点</td>
+        </tr> 
+        <tr class="weight-value">
+          <th class="health-detail"> リフレッシュ優先順位</th>
+          <td class="detail-value">ランク<%= @health.refreshweight_id %></td>
+        </tr>
+        <tr class="title-border">
+          <th class="health-detail"> リフレッシュ総合点数</th>
+          <td class="detail-value"><%= ( @health.refreshdoa_id.to_i + @health.refreshdob_id.to_i + @health.refreshdoc_id.to_i + @health.refreshdod_id.to_i + @health.refreshfeela_id.to_i + @health.refreshfeelb_id.to_i + @health.refreshfeelc_id.to_i + @health.refreshfeeld_id.to_i ) * @health.refreshweight_id.to_i %>点</td>
+        </tr>      
+      </tbody> 
+    </table>
+  </div>
+
+  
+</div>
