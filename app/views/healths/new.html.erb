@@ -4,7 +4,7 @@
         <%= image_tag "伊吹山.jpg" , class: "healthnew-image" %>
 
       <%= form_with model: @health , class: "health__wrapper" , local: true do |f| %>
-        <div class="field">
+        <div class="health_field">
 
          <%# ストレス項目 %>
           <%# ストレス事例 %>
@@ -203,7 +203,7 @@
 
 
         <div class="actions">
-          <%= f.submit "回答の総合結果を記録・共有する", class: :form__btn  %>
+          <%= f.submit "回答を記録する", class: :form__btn  %>
      
         </div><br>
 
