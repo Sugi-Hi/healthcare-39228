@@ -1,8 +1,9 @@
 class HealthsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_health , except: [:index , :new , :create]
 
   def index
-    @healths = Health.all
+    @healths = Health.includes(:user).order("created_at DESC")
   end
 
   def new
@@ -18,6 +19,12 @@ class HealthsController < ApplicationController
     end
   end
   
+  def show
+  end
+
+
+
+
 
   private
 
@@ -27,9 +34,10 @@ class HealthsController < ApplicationController
                                    :refresh , :refreshdoa_id , :refreshdob_id ,:refreshdoc_id ,:refreshdod_id ,
                                    :refreshfeela_id , :refreshfeelb_id , :refreshfeelc_id , :refreshfeeld_id , :refreshweight_id , 
                                    :image).merge(user_id: current_user.id)
-  
-  
-  
+  end
+
+  def set_health
+    @health = Health.find(params[:id])
   end
 
 end
