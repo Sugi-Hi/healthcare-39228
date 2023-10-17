@@ -8,7 +8,7 @@
 
          <%# ストレス項目 %>
           <%# ストレス事例 %>
-          <div class= "field__text">
+          <div class= "health__title">
             <%= f.label :stress, "◇主なストレス事例" %><br />
             <%= f.text_field :stress  , id:"health_stress"  %>
           </div>
@@ -17,7 +17,7 @@
             <strong class="health__box" >
                 　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　現状直面の度合/頻度</strong>
             <strong class="health__box" >
-                　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　◇ストレス：優先順位
+                　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　◇ストレス重度
               <%# 3段階評価(1.不問～3.重要) %>
               <%= f.collection_select(:stressweight_id, Stressweight.all, :id, :name, {}, {class: "form__score"}) %>   
              </strong>
@@ -103,17 +103,17 @@
 
           <%# リフレッシュ項目 %>
           <%# リフレッシュ事例 %>
-          <div class="field__text"><hr>
-            <%= f.label :refresh, "〇主なリフレッシュ事例" %><br />
+          <div class="health__title"><hr>
+            <%= f.label :refresh, "〇主なリフレッシュ事例" %><br>
             <%= f.text_field :refresh,  id:"health_refresh" %>
           </div>
 
           <div class="health__text">
             <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　現状直面の度合/頻度</strong>
-            <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　〇リフレッシュ：優先順位
             <%# 3段階評価(1.不問～3.重要) %>
+            <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　〇リフレッシュ優先度
             <%= f.collection_select(:refreshweight_id, Refreshweight.all, :id, :name, {}, {class: "form__score"}) %>
-            </strong>
+            </strong><br />          
           </div>
           <%# リフレッシュ習慣フォームからの点数化 %>
           <strong class="health__box" >行動面　　　　　　　　　　</strong>

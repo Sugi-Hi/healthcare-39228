@@ -17,12 +17,18 @@
 
 /* 回答ページ */
 .health_new_image{
-  width: 90vw;
+  width: 100vw;
   height: 1000px;
   margin: 0 auto;
   padding: 16px 0;
 }
 
+.health_title{
+  white-space: nowrap;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+}
 .health__text {
   white-space: nowrap;
   align-items: center;
@@ -33,7 +39,7 @@
 .health__box{
   text-align: right;
   width: 10vw;
-  margin: 5px 30px 0px 30px;
+  margin: 5px 0px 0px 10px;
   margin-right: 0px;
 }
 
