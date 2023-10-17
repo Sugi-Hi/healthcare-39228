@@ -22,9 +22,24 @@ class HealthsController < ApplicationController
   def show
   end
 
+  def edit
+  end
 
+  def update
+    if @health.update(health_params)
+      redirect_to health_path
+    else
+      render :edit
+    end
+  end
 
-
+  def destroy
+    if @health.destroy
+      redirect_to root_path
+    else
+      render :show
+    end
+  end
 
   private
 
