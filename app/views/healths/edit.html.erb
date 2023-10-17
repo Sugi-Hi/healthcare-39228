@@ -1,14 +1,14 @@
 <div class="health_inner">
     <h2 class="form__text"> 健康診断自己チェックへの新規回答 </h2>
         
-        <%= image_tag "伊吹山.jpg" , class: "health_new_image" %>
+        <%= image_tag "琵琶湖虹.jpg" , class: "health_new_image" %>
 
       <%= form_with model: @health , class: "health__wrapper" , local: true do |f| %>
         <div class="health_field">
 
          <%# ストレス項目 %>
           <%# ストレス事例 %>
-          <div class= "health__title">
+          <div class= "field__text">
             <%= f.label :stress, "◇主なストレス事例" %><br />
             <%= f.text_field :stress  , id:"health_stress"  %>
           </div>
@@ -104,16 +104,16 @@
           <%# リフレッシュ項目 %>
           <%# リフレッシュ事例 %>
           <div class="health__title"><hr>
-            <%= f.label :refresh, "〇主なリフレッシュ事例" %><br>
+            <%= f.label :refresh, "〇主なリフレッシュ事例" %><br />
             <%= f.text_field :refresh,  id:"health_refresh" %>
           </div>
 
           <div class="health__text">
             <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　現状直面の度合/頻度</strong>
-            <%# 3段階評価(1.不問～3.重要) %>
             <strong class="health__box" >　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　〇リフレッシュ優先度
+            <%# 3段階評価(1.不問～3.重要) %>
             <%= f.collection_select(:refreshweight_id, Refreshweight.all, :id, :name, {}, {class: "form__score"}) %>
-            </strong><br />          
+            </strong>
           </div>
           <%# リフレッシュ習慣フォームからの点数化 %>
           <strong class="health__box" >行動面　　　　　　　　　　</strong>
@@ -203,7 +203,7 @@
 
 
         <div class="actions">
-          <%= f.submit "回答を記録する", class: :form__btn  %>
+          <%= f.submit "回答を変更する", class: :form__btn  %>
      
         </div><br>
 
