@@ -5,8 +5,9 @@
 /* フォーム文頭 */
 .health_inner {
   width: 1024px;
-  height: 2500px;
+  height: 2700px;
   margin: auto;
+  padding: 0px;
 }
 .health_hedding{
   font-size: 24px;
@@ -14,14 +15,14 @@
   text-align: center;
 }
 
-.healthnew__image{
+/* 回答ページ */
+.health_new_image{
   width: 90vw;
   height: 1000px;
   margin: 0 auto;
   padding: 16px 0;
 }
 
-/* 回答ページ */
 .health__text {
   white-space: nowrap;
   align-items: center;
@@ -55,7 +56,7 @@
   width: 1025px;
   flex-direction: column;
   position: relative;
-  top:  16%; /* 画像の中央に配置するための調整 */
+  top:  15%; /* 画像の中央に配置するための調整 */
   left: 50%; /* 画像の中央に配置するための調整 */
   transform: translate(-50%, -70%); /* 画像の中央に配置するための調整 */
   background-color: rgba(255, 255, 255, 0.7); 
@@ -68,8 +69,16 @@
 
 
 /* 詳細ページ */
+.health_show_image{
+  width: 90vw;
+  height: 1350px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+ /* 表データ */
 .health__table{
-  height: 1000px;
+  height: 50%;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -78,9 +87,8 @@
   left: 50%; /* 画像の中央に配置するための調整 */
   transform: translate(-50%, -100%); /* 画像の中央に配置するための調整 */
   background-color: rgba(255, 255, 255, 0.7); 
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 }
-
 .title-border{
   font-size: 10px;
   width: 50%;
@@ -103,14 +111,14 @@
 }
 
 .health-detail{
-  width: 21%;
+  width: 20%;
   align-items: center;
   font-size: 20px;
   border: 1px solid #05010b;
   margin-bottom: 8px;
 }
 .detail-value {
-  width: 29%;
+  width: 25%;
   padding: 20px;
   border: 1px solid #05010b;
   font-size: 30px;
@@ -131,25 +139,99 @@
   justify-content: center;
   padding-top: 16px;
 }
-.healthit__btn{
-  display: block;
+
+
+
+.health__btn{
+  height: 50%;
+  width: 50%;
+  margin-top: 0px;
+  padding: 5vh 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  position: relative;
+  top:  0%; /* 画像の中央に配置するための調整 */
+  left: 50%; /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -100%); /* 画像の中央に配置するための調整 */
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+ /* 編集ボタン */
+.health_edit_btn{
   padding: 0.4em 1.6em;
-  font-size: 0.4em;
-  color: #999;
+  width: 500px;
+  font-size: 3.0em;
+  color: #c19cf7;
+  background-color: #926004;
   text-decoration: none;
-  user-select: none;
   border: 1px #999 solid;
   border-radius: 3px;
-  transition: 0.4s ease;
-  margin: 0 4px;
+  position: relative;
+  margin: 0px;
+  text-align: center;
 }
-.health__btn:hover{
-  color: #fff;
-  background: #999;
+ /* 削除ボタン */
+.health_destroy_btn{
+  width: 400px;
+  height: 100px;
+  font-size: 2.0em;
+  padding: 0.6em 1.6em;
+  color: #dfe6c0;
+  background-color: #5e020d;
+  text-align: center;
+  margin: 10px 50px;
+}
+
+
+
+
+
+.cares_lists{
+  padding: 0px;
+  height: 80%;
+  width: 1000px;
+  background-color: rgba(130, 231, 245, 0.734); 
+  margin-top: 0px;
+  margin-bottom: 500px;
+  padding: 10px;
+  align-items: center;
+  top:  0%; /* 画像の中央に配置するための調整 */
+  left: 50%; /* 画像の中央に配置するための調整 */
+  transform: translate(-0%, -100%); /* 画像の中央に配置するための調整 */
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+
+.cares_list{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  /* list-style-type: square; */
+  padding-bottom: 5px;
+  margin: 0px;
+}
+.carecard__img{
+  width: 150px;
+  height: 150px;
+  margin: 0px;
+  margin-bottom: 16px;
+}
+
+.care_user{
+  font-size: 50px;
+  color: #dcf191;
+  text-decoration: underline;
 }
 
 .health__favor{
-  background-color: #f6f6f6;
+  color: #cbe4ee;
+  background-color: #490455;
   padding: 20px;
   margin: 28px 0 40px 0;
+  padding: 1.0em 1.6em;
+  height: 200px;
+  width: 500px;
+  font-size: 3.0em;
 }
+
+
+
