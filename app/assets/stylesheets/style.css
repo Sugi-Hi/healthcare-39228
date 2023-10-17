@@ -224,7 +224,7 @@ a {
 
 .greet{
   position: absolute;
-  top: 30%; /* 画像の中央に配置するための調整 */
+  top: 40%; /* 画像の中央に配置するための調整 */
   left: 45%; /* 画像の中央に配置するための調整 */
   width: 60%;
   transform: translate(-50%, -50%); /* 画像の中央に配置するための調整 */
@@ -245,7 +245,7 @@ a {
 
 /* 診断結果の一覧表示 */
 
-.healths__wrapper {
+.allhealths__wrapper {
   min-height: calc(100vh - 100px);
   height: 1000px;
   position: relative;
@@ -293,21 +293,7 @@ a {
   text-align: center;
 }
 
-
-
-.cares_lists{
-  padding-left: 20px;
-}
-
-.cares_list{
-  list-style-type: square;
-  padding-bottom: 5px;
-}
-
-.care_user{
-  font-size: 16px;
-  color: #999;
-  text-decoration: underline;
+ation: underline;
 }
 
 /* ユーザーページ */
