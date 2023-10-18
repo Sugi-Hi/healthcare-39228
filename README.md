@@ -7,11 +7,16 @@ Health Care
 # URL
 https://healthcare-39228.onrender.com
 
-# テスト用アカウント
-・Basic認証ID：su-hi
-・Basic認証パスワード：2023
-・メールアドレス：health@c.com
-・パスワード：care23
+# テスト用アカウント(必要時に記載)
+・Basic認証ID：
+・Basic認証パスワード：
+
+## 健康診断回答者用
+・メールアドレス：
+・パスワード：
+## 回答との共感者者用
+・メールアドレス：
+・パスワード：
 
 # 利用方法
 ## 目標投稿
@@ -95,7 +100,7 @@ healthcare.dio
 ### cares(ケア対策の選定機能) Table
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
-| care_date     | date       |                                |
+| care_date     | date       | null: false                    |
 | care_time     | datetime   |                                |
 | care_place    | text       |                                |
 | go_by         | string     |                                |
