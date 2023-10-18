@@ -157,7 +157,7 @@
   align-items: top;
   position: relative;
   top:  0%; /* 画像の中央に配置するための調整 */
-  left: 50%; /* 画像の中央に配置するための調整 */
+  left: 45%; /* 画像の中央に配置するための調整 */
   transform: translate(-50%, -100%); /* 画像の中央に配置するための調整 */
   background-color: rgba(255, 255, 255, 0.7); 
 }
