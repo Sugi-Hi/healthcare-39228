@@ -1,0 +1,65 @@
+*{ 
+  box-sizing: border-box;
+}
+
+/* フォーム文頭 */
+.care__inner {
+  width: 1024px;
+  height: 2700px;
+  margin: auto;
+  padding: 0px;
+}
+.care__hedding{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.care__image{
+  width: 100vw;
+  height: 1000px;
+  margin: 0 auto;
+  padding: 16px 0;
+}
+
+/* 対策ページ */
+.care__wrapper{
+  height: 2000px;
+  width: 1025px;
+  position: relative;
+  top:  15%; /* 画像の中央に配置するための調整 */
+  left: 50%; /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -70%); /* 画像の中央に配置するための調整 */
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+.care_field{
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.care_title{
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px;
+}
+.care_select {
+  white-space: nowrap;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.care_box{
+  text-align: right;
+  width: 10vw;
+  margin: 5px 0px 0px 10px;
+  margin-right: 0px;
+}
+
