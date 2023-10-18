@@ -2,6 +2,13 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "healths#index"
   resources :healths do
-    resources :cares
+    resources :cares , only: [:index , :create]
+      # 検索メソッド機能の付与は今後の課題
+    collection  do
+      get 'search'
+    end
   end
+
 end
+
+
