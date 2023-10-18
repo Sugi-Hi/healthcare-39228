@@ -57,5 +57,14 @@ class Health < ApplicationRecord
   has_one_attached :image
 
   belongs_to :user
+  has_many :cares
+
+  def self.search(search)
+    if search != ""
+      Health.where('title LIKE(?)' , "%#{search}%" )
+    else
+      Health.all
+    end
+  end
 
 end

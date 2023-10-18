@@ -16,11 +16,19 @@
     <header class="header">
       <div class="head__inner">
         <div class="nav">
-            <%# ヘルスケア象徴ロゴ：以下のイラスト絵マークでクリックするとトップページ戻る %>
+          <%# ヘルスケア象徴ロゴ：以下のイラスト絵マークでクリックするとトップページ戻る %>
           <div class="nav__left">
             <%= link_to image_tag("healthcare logo.png", class: :logo), root_path %>
           </div>
-          
+          <%# 検索機能フォーム欄 %>
+          <div class="nav__center">
+            <%= form_with(url: "#" , method: :get,  local: true,class:"search_text") do |form| %>
+              <%= form.text_field :keyword, placeholder: "投稿を検索する" %>
+              <%= form.submit "検索" %>
+            <% end %>
+          </div>
+        
+
           <%# ログイン中：以下の表示%>
           <% if user_signed_in?  %>
             <div class="nav__right">
