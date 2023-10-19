@@ -108,7 +108,7 @@
       <%# ログイン中ユーザーと出品ユーザーが同一人物の場合、編集・削除ボタン表示有り %>
       <% if user_signed_in? && current_user.id == @health.user[:id] %>
         <%= link_to "診断回答データでの編集", edit_health_path(@health) , method: :get, class: "health_edit_btn" %><br>
-        <%= link_to "診断回答データ削除", health_path , method: :delete, class:"health_destroy_btn" %><br>
+        <%= link_to "診断回答データ削除", health_path(@health) , method: :delete, class:"health_destroy_btn" %><br>
       <%# ログイン中ユーザーと出品ユーザーが違う人物場合、購入ボタンのみ表示 %>
       <% elsif user_signed_in? && current_user.id != @health.user[:id]  %>
         <%= link_to "お気に入り共感", "#" ,class: "health__favor"%>

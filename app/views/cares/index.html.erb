@@ -3,35 +3,37 @@
 
     <%= image_tag "nature.JPG" , class: "care__image" %>
 
-  <%= form_with model: @care , class: "care__wrapper"  , local: true do |f| %>
+  <%= form_with model:[ @health, @care ] , class: "care__wrapper"  , local: true do |f| %>
     <div class="care_field" >
-      <div class="care_title">
-        <%= f.label :care_date, "対策予定日" %><br>
-        <%= raw sprintf( f.date_select(
-                          :care_date,
-                          class: "care_select",
+
+      <%= render "devise/shared/error_messages", resource: f.object , class: "health_error" %> 
+
+      <div class="care_title"><br>
+        <%= f.label :care_date, "◎対策予定日" %><br>
+        <%= raw sprintf( f.date_select(:care_date, class: "care_select",
                           use_month_numbers: true,
                           prompt:'--',
                           start_year: 2023,
                           end_year: (Time.now.year + 5 ),
-                          date_separator: '%s'),
-                        "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
+                          date_separator: '%s'), "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>" %>
       </div> 
       <div class="care_title">
-        <%= f.label :care_time, "予定時間帯(開始時間)" %><br>
-        <%= f.datetime_select :care_time  %>
+        <%= f.label :care_time, "〇予定時間帯(開始時刻)　　" %><br>
+        <%= f.time_select :care_time, class: "care_select" ,
+                          prompt:'--',
+                          time_separator: ':',  ignore_data: true %> 
       </div>
       <div class="care_title">
-        <%= f.label :care_place, "可能な場所" %><br>
-        <%= f.text_field :go_by  %>
+        <%= f.label :care_place, "〇可能な場所　" %><br>
+        <%= f.text_area :care_place  %>
       </div>           
       <div class="care_title">
-        <%= f.label :go_by, "探し方・移動手段" %><br>
+        <%= f.label :go_by, "〇探し方・移動手段　" %><br>
         <%= f.text_field :go_by  %>
       </div>
       <div class="care_title">
-        <%= f.label :care_method, "提案ケア・アクティブからの選定" %><br>
-        <%= f.collection_select(:care_method , Caremethod.all, :id , :name , {}, {class: "care_select"} ) %>
+        <%= f.label :caremethod_id , "◎提案ケア・アクティブからの選定　　" %><br>
+        <%= f.collection_select(:caremethod_id , Caremethod.all, :id , :name , {}, {class: "care_select"} ) %>
       </div>
 
        <div class="actions">
@@ -40,4 +42,41 @@
 
     </div>
   <% end %>
+
+    <div class="allcares__wrapper">
+      <div class="cares">
+        <% @cares.each do |care| %>
+          <div class="care_plan" >
+            <div class="caredecide_img">
+              <% case care.caremethod_id %>
+              <% when 1 %>
+                <%= image_tag "活発な交流会.JPG"%>　<%= image_tag "富士山.JPG"%><br>
+              <% when 2 %>
+                <%= image_tag "新幹線旅行.JPG"%>　<%= image_tag "コスモワールド.JPG"%><br>
+              <% when 3 %>
+                <%= image_tag "函館市6.JPG"%>　<%= image_tag "nature.JPG"%><br>
+              <% when 4 %>
+                <%= image_tag "natural.png"%><br>
+              <% when 5 %>
+                <%= image_tag "健康ペットボトル式飲料.JPG"%>　<%= image_tag "健康パウチ式ゼリー飲料.JPG"%><br>
+              <% when 6 %>
+                <%= image_tag "癒し語り場.JPG"%>　<%= image_tag "健康サプリメント.JPG"%><br> 
+              <% when 7 %>
+                <%= image_tag "医療機関.JPG"%>　<%= image_tag "タブレット処方箋.JPG"%><br>   
+              <% end %>
+            </div>
+            <div class="main_plans">
+             ○<%= care.care_date %><hr>
+              <%= care.care_time.strftime( "%H:%M" ) %><br>
+              <%= care.care_place %><br>
+              <%= care.go_by %><hr>
+              <%= care.caremethod[:name] %><br><br>
+              <%# 予定削除は詳細データ回答記録削除からする様にします %>
+              <%# <%= link_to "予定削除", health_cares_path(care.health), method: :delete , class: :form__btn %>
+            </div>
+          </div><hr>
+        <% end %>
+      </div>
+    </div>
+
 </div>
