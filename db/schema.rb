@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2023_10_18_014245) do
 
   create_table "cares", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "care_date", null: false
-    t.datetime "cate_time"
+    t.time "care_time"
     t.text "care_place"
     t.string "go_by"
     t.integer "caremethod_id", null: false

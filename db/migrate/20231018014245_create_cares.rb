@@ -2,7 +2,7 @@ class CreateCares < ActiveRecord::Migration[6.0]
   def change
     create_table :cares do |t|
       t.date          :care_date,     null: false
-      t.datetime      :cate_time
+      t.time          :care_time
       t.text          :care_place
       t.string        :go_by
       t.integer       :caremethod_id, null: false
