@@ -5,7 +5,7 @@
 /* フォーム文頭 */
 .care__inner {
   width: 1024px;
-  height: 2700px;
+  height: 2500px;
   margin: auto;
   padding: 0px;
 }
@@ -19,17 +19,17 @@
   width: 100vw;
   height: 1000px;
   margin: 0 auto;
-  padding: 16px 0;
+  padding: 0px;
 }
 
 /* 対策ページ */
 .care__wrapper{
-  height: 2000px;
+  height: 1000px;
   width: 1025px;
   position: relative;
-  top:  15%; /* 画像の中央に配置するための調整 */
+  top:  0%; /* 画像の中央に配置するための調整 */
   left: 50%; /* 画像の中央に配置するための調整 */
-  transform: translate(-50%, -70%); /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -100%); /* 画像の中央に配置するための調整 */
   background-color: rgba(255, 255, 255, 0.7); 
 }
 .care_field{
@@ -39,14 +39,13 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 20px;
+  padding-left: 50px;
 }
 
 .care_title{
   font-size: 20px;
-  text-align: center;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-around;
   margin: 50px;
 }
@@ -63,3 +62,44 @@
   margin-right: 0px;
 }
 
+/* 対策への選定一覧ページ */
+.allcares__wrapper{
+  min-height: calc(100vh -100px);
+  position: relative;
+  top:  0%; /* 画像の中央に配置するための調整 */
+  left: 50%; /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -100%); /* 画像の中央に配置するための調整 */
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 200px;
+}
+.cares{
+  width: 1000px;
+  height: 50%;
+  background-color: rgba(237, 249, 124, 0.769); 
+  margin-bottom: 20px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+.care_plan{
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding-left: 50px;
+}
+
+.caredecide_img{
+  white-space: nowrap;
+  flex-wrap: wrap;
+  width: 150px;
+  height: 200px;
+  margin-bottom: 0px;
+}
+.main_plans{
+  text-align: left;  
+  font-size: 15px;
+  margin-bottom: 0px;
+  margin-right: 50px;
+  font-weight: bold;
+}
