@@ -45,6 +45,9 @@ class HealthsController < ApplicationController
     @healths = Health.search(params[:keyword])
   end
 
+  def care
+  end
+
   private
 
   def health_params

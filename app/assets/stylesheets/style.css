@@ -94,7 +94,7 @@ a {
 .nav__btn{
   display: inline-block;
   padding: 0.8em 1.6em;
-  margin: auto 0px;
+  margin: auto 20px;
   height: 50px;
   width: 150px;
   font-size: 1.0em;
@@ -128,7 +128,16 @@ a {
 .nav__logout:hover{
   opacity: 0.5;
 }
-/* ユーザー管理 */
+/* 新規登録・ログイン用のユーザー管理 */
+.form__wrapper{
+  min-height: calc(100vh - 300px);
+  flex-direction: column;
+  position: relative;
+  top: 5%; /* 画像の中央に配置するための調整 */
+  left: 50%; /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -100%); /* 画像の中央に配置するための調整 */
+  background-color: rgba(255, 255, 255, 0.7); 
+}
 .user__field{
   text-align: center;
   align-items: center;
@@ -136,17 +145,7 @@ a {
   height: 40vh;
 }
 
-.form__wrapper{
-  height: 60vh;
-  flex-direction: column;
-  position: relative;
-  top:  30%; /* 画像の中央に配置するための調整 */
-  left: 50%; /* 画像の中央に配置するための調整 */
-  transform: translate(-50%, -50%); /* 画像の中央に配置するための調整 */
-  background-color: rgba(255, 255, 255, 0.7); 
-}
-
-.user-image {
+.user_image {
   position: relative;
   top: 20%; /* 画像の中央に配置するための調整 */
   left: 10%; /* 画像の中央に配置するための調整 */
@@ -156,7 +155,56 @@ a {
 .error{
   text-align: center;
 }
-
+/* 登録変更・ユーザーページ */
+.user__wrapper{
+  height: 70vh;
+  flex-direction: column;
+  position: relative;
+  top:  0%; /* 画像の中央に配置するための調整 */
+  left: 50%; /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -100%); /* 画像の中央に配置するための調整 */
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+.user_page {
+  font-size: 30px;
+  margin-top: 28px;
+}
+.anyusers__wrapper{
+  min-height: calc(100vh - 500px);
+  flex-direction: column;
+  position: relative;
+  top:  0%; /* 画像の中央に配置するための調整 */
+  left: 50%; /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -90%); /* 画像の中央に配置するための調整 */
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+.table{
+  border-collapse: collapse;
+  margin-bottom: 32px;
+  width: 50%;
+}
+.table__col1{
+  text-align: left;
+  font-weight: bold;
+  background: #fafafa;
+  border-collapse: collapse;
+  border: 1px solid #f5f5f5;
+  width: 30%;
+  padding: 8px;
+}
+.table__col2{
+  text-align: left;
+  border: 1px solid #f5f5f5;
+  border-collapse: collapse;
+  width: 70%;
+  padding: 16px 8px;
+}
+.user__card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* ページ文頭 */
 .form__text {
@@ -180,15 +228,6 @@ a {
 
 
 /* 入力フォーム周辺 */
-.form__wrapper{
-  min-height: calc(100vh - 500px);
-  flex-direction: column;
-  position: relative;
-  top: 10%; /* 画像の中央に配置するための調整 */
-  left: 50%; /* 画像の中央に配置するための調整 */
-  transform: translate(-50%, -100%); /* 画像の中央に配置するための調整 */
-  background-color: rgba(255, 255, 255, 0.7); 
-}
 
 .field{
   text-align: center;
@@ -247,10 +286,7 @@ a {
   color: #260843;
   text-decoration: underline;
 }
-.page-heading {
-  font-size: 30px;
-  margin-top: 28px;
-}
+
 
 /* 診断結果の一覧表示 */
 
@@ -288,9 +324,7 @@ a {
   margin-bottom: 0px;
   font-weight: bold;
 }
-.card__summary {
-  font-size: 16px;
-}
+
 .card__user {
   display: block;
   font-size: 12px;
@@ -303,37 +337,7 @@ a {
 }
 
 
-/* ユーザーページ */
-.users__wrapper{
-  min-height: calc(100vh - 161px);
-}
-.table{
-  border-collapse: collapse;
-  margin-bottom: 32px;
-  width: 50%;
-}
-.table__col1{
-  text-align: left;
-  font-weight: bold;
-  background: #fafafa;
-  border-collapse: collapse;
-  border: 1px solid #f5f5f5;
-  width: 30%;
-  padding: 8px;
-}
-.table__col2{
-  text-align: left;
-  border: 1px solid #f5f5f5;
-  border-collapse: collapse;
-  width: 70%;
-  padding: 16px 8px;
-}
-.user__card {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-}
+
 /* フッター */
 
 .footer {
