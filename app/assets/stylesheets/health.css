@@ -230,6 +230,14 @@
   margin: 0px;
   margin-bottom: 16px;
 }
+.check-out {
+  position: absolute;
+  top: 20%;
+  width: 70%;
+  text-align: center;
+  background-color: rgb(34, 3, 6);
+  transform: skewY(-10deg);
+}
 
 .care_user{
   font-size: 50px;
