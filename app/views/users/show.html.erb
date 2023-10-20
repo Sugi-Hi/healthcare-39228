@@ -1,0 +1,18 @@
+ <div class="main">
+  <div class="inner">
+
+    <%= image_tag "nature.JPG" , class: "top-image" %>
+
+    <div class="anyusers__wrapper">
+      <h1 class="user_page"><%= "☆#{current_user.nickname}さん!!"%></h1>
+      <h2>健康診断自己チェックの回答・対策への選択・決定とお疲れ様でした++**^^</h2><hr>
+       <h1>共感できた投稿者<h1>
+       <% if current_user.id != @user.id  %>
+          <% @other_users.each do |users| %>
+          <h1>○<%= users.nickname %><h1>
+          <% end %>
+        <% end %>
+       
+    </div>
+  </div>
+</div>

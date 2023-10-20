@@ -10,7 +10,6 @@ https://healthcare-39228.onrender.com
 # テスト用アカウント(必要時に記載)
 ・Basic認証ID：
 ・Basic認証パスワード：
-
 ## 健康診断回答者用
 ・メールアドレス：
 ・パスワード：

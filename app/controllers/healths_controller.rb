@@ -1,6 +1,6 @@
 class HealthsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_health , except: [:index , :new , :create]
+  before_action :authenticate_user!, except: [:index, :show, :search]
+  before_action :set_health , except: [:index , :new , :create , :search]
 
   def index
     @healths = Health.includes(:user).order("created_at DESC")
@@ -39,6 +39,13 @@ class HealthsController < ApplicationController
     else
       render :show
     end
+  end
+
+  def search
+    @healths = Health.search(params[:keyword])
+  end
+
+  def care
   end
 
   private

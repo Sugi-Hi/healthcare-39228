@@ -1,14 +1,14 @@
 <h2 class="form__text">登録変更!? <%= "#{current_user.nickname}さん"%></h2>  <%# resource_name.to_s.humanize %>
   
-    <%= image_tag "伊吹山.jpg" , class: "user-image" %>
+    <%= image_tag "伊吹山.jpg" , class: "user_image" %>
 
-<%= form_with model: @user, url: user_registration_path, class: "form__wrapper", html: { method: :put } ,local: true do |f| %>
+<%= form_with model: @user, url: user_registration_path, class: "user__wrapper", html: { method: :put } ,local: true do |f| %>
 
   <div class="user_field">
 
     <%= render "devise/shared/error_messages", resource: resource , class:"error" %>
 
-    <div class="field_text">
+    <div class="field_text"><br>
       〇<%= f.label :email %><br>
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
