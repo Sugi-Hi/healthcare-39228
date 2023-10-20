@@ -101,9 +101,10 @@
           <%# ストレス総合得点 %>
           <span id="stress-score"><%= @stress_score = hardwork + hardpersons + painfullife + loss + duty + tired + neglect + nervous %></span><br>
 
+          <hr>
           <%# リフレッシュ項目 %>
           <%# リフレッシュ事例 %>
-          <div class="health__title"><hr>
+          <div class="health__title">
             <%= f.label :refresh, "〇主なリフレッシュ事例" %><br>
             <%= f.text_field :refresh,  id:"health_refresh" %>
           </div>

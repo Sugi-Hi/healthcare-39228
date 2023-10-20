@@ -111,7 +111,7 @@
         <%= link_to "診断回答データ削除", health_path(@health) , method: :delete, class:"health_destroy_btn" %><br>
       <%# ログイン中ユーザーと出品ユーザーが違う人物場合、購入ボタンのみ表示 %>
       <% elsif user_signed_in? && current_user.id != @health.user[:id]  %>
-        <%= link_to "お気に入り共感", "#" ,class: "health__favor"%>
+        <%= link_to "#{@health.user.nickname}さんに<br>お気に入り共感".html_safe , user_path(@health.user) ,class: "health__favor"%>
       <% else %>  
         <%# ログアウト中は編集・削除・購入ボタン表示無し %>
       <% end %>
