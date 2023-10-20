@@ -166,16 +166,16 @@ a {
   background-color: rgba(255, 255, 255, 0.7); 
 }
 .user_page {
-  font-size: 30px;
-  margin-top: 28px;
+  font-size: 25px;
+  margin-top: 25px;
 }
 .anyusers__wrapper{
-  min-height: calc(100vh - 500px);
+  min-height: calc(100vh - 200px);
   flex-direction: column;
   position: relative;
-  top:  0%; /* 画像の中央に配置するための調整 */
+  top:  15%; /* 画像の中央に配置するための調整 */
   left: 50%; /* 画像の中央に配置するための調整 */
-  transform: translate(-50%, -90%); /* 画像の中央に配置するための調整 */
+  transform: translate(-50%, -50%); /* 画像の中央に配置するための調整 */
   background-color: rgba(255, 255, 255, 0.7); 
 }
 .table{
