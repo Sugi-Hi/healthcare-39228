@@ -1,8 +1,8 @@
 # アプリケーション名
-Health Care
+healthcare
 
 # アプリケーション概要
-健康維持の為に、健康診断用の自己チェックにより、体調不良にも気付き、自分に合ったすぐケアへの対策や選択の決定ができます。
+現状態の自己チェックにより、体調異変があってもすぐ気付き、自分に合ったケアへの対策や選択を決定する事で、健康管理が効率的にできる健康診断用アプリです。
 
 # URL
 https://healthcare-39228.onrender.com
@@ -22,10 +22,10 @@ https://healthcare-39228.onrender.com
 1.トップページ(一覧ページ)からヘッダーのユーザー新規登録・ログインを行います。
 2.健康診断回答ページ(投稿ページ)から、自己チェックで下記の様に回答します。
 ・必須入力2項目(主なストレス要因・主なリフレッシュ習慣)、
-・必須選択9項目(行動面,心理面:2項目|a,b,c,d:4箇所|[計8項目]・ストレス優先順位)
-・必須選択9項目(行動面,心理面:2項目|a,b,c,d:4箇所|[計8項目]・リフレッシュ優先順位)
+・必須選択9項目(行動面,心理面|a,b,c,d:4箇所|[計8項目]・ストレス優先順位[1項目])
+・必須選択9項目(行動面,心理面|a,b,c,d:4箇所|[計8項目]・リフレッシュ優先順位[1項目])
 ・任意選択(画像ファイル)
-3.2項目入力、9項目選択[合計20項目]を自己チェックできたら、回答ボタンをクリックします。
+3.2項目入力、18項目選択[合計20項目]を自己チェックできたら、回答ボタンをクリックします。
 ## 他者への応援
 1.一覧ページから健康診断回答アイコン(画像,イラスト図)をクリックして、移動先の詳細ページから確認します。
 
@@ -86,10 +86,10 @@ healthcare.dio
 | user             | references | null: false, foreign_key: true |
 <!-- ・ストレス要因
 必須の合計点数(stress_score)も必須カラムとの前提です。
-各ストレス要因の点数は計9カラム(stressdoa~stressdod,stressfeela~stressfeeld,)使用されます。 -->
+各ストレス要因の点数は計9カラム(stressdoa～stressdod,stressfeela～stressfeeld,stressweight)使用されます。 -->
 <!-- ・リフレッシュ習慣
 必須の合計点数(refresh_score)も必須カラムとの前提です。
-各リフレッシュ習慣の点数は計8変数(goodjob,matchpersons,happylife,income,hobby,energy,support,safely)使用されます。 -->
+各リフレッシュ習慣の点数は計9カラム(refreshdoa～refreshdod,refreshfeela～refreshfeeld,refreshweight)使用されます。 -->
 ### Association
 - belongs_to :user
 - has_one :care
@@ -115,4 +115,19 @@ healthcare.dio
 ----------------------------------------------------------
 
 # 開発環境
-VScode
+・プログラミング：Visual Studio code
+・ターミナル：Ubuntu
+・PC言語：HTML/CSS、Ruby on Rails、JavaScript
+・記録・経緯：GitHub Desktop
+・ローカル(個人)環境：localhost:3000
+・本番環境：Render Dashboard
+・サクラエディタ(メモ用)
+
+# ローカルでの動作方法
+・git clone https://github.com/Sugi-Hi/healthcare-39228
+・cd ~/Techcamp/projects/healthcare-39228
+・bundle install
+・yarn install
+・rails s
+
+# 工夫したポイント
