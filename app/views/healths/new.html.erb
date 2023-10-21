@@ -25,7 +25,7 @@
           <%# ストレス要因フォームからの点数化 %>
           <strong class="health__box" >行動面　　　　　　　　　　</strong>
           <div class="health__text">
-            <em>a.業務労働：忙しすぎて、大変な責任ある担当を任されている負担度　　　　</em>
+            <em>a.業務労働：忙しすぎて、やらねばならない事ばかりで余裕が持てない負担度</em>
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:stressdoa_id, Stressdoa.all, :id, :name, {}, {class: "form__score"}) %>
@@ -34,7 +34,7 @@
              </div>
           </div>
           <div class="health__text">
-            <em>b.人間関係：ギクシャクして、解消し切れずため込んだストレス度　　　　　</em>
+            <em>b.人間関係：ギクシャクして、解消し切れずため込んだ悩み・もやもやの度合</em>
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:stressdob_id, Stressdob.all, :id, :name, {}, {class: "form__score"}) %>
@@ -52,7 +52,7 @@
             </div>
           </div> 
           <div class="health__text">
-            <em>d.損失：経済が不安定で、頑張っているのに結果が出ず報われないストレス度</em>         
+            <em>d.不本意：頑張っているのに、評価・結果が出ず報われない不満・イライラ度</em>         
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:stressdod_id, Stressdod.all, :id, :name, {}, {class: "form__score"}) %>
@@ -62,7 +62,7 @@
           </div>  
           <strong class="health__box" >心理面　　　　　　　　　　</strong>
           <div class="health__text">
-            <em>a.責任：やらねばならない事ばかりで余裕なく、解消がし切れないストレス度</em>         
+            <em>a.責任：大変な責任ある担当を任されて、解消がし切れないストレス度　　　</em>         
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:stressfeela_id, Stressfeela.all, :id, :name, {}, {class: "form__score"}) %>
@@ -71,7 +71,7 @@
             </div>
           </div>
           <div class="health__text">
-            <em>b.疲労：頑張り過ぎて休む暇が無く、疲労から中々回復しないストレス度　　</em>         
+            <em>b.疲労：頑張り過ぎて休む暇が無く、疲労から中々回復しない大変な度合　　</em>         
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:stressfeelb_id, Stressfeelb.all, :id, :name, {}, {class: "form__score"}) %>
@@ -80,7 +80,7 @@
              </div>
           </div>  
           <div class="health__text">
-            <em>c.孤立：話し合える仲間がいなく、周りとの協力が難しいストレス度　　　　</em>         
+            <em>c.孤立：話し合える仲間がいなく、周りとの協力が困難からの悲痛な度合　　</em>         
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:stressfeelc_id, Stressfeelc.all, :id, :name, {}, {class: "form__score"}) %>
@@ -89,7 +89,7 @@
             </div>
           </div> 
           <div class="health__text">
-            <em>d.不安：やりたい事が不明でプレッシャー感覚過敏、神経質のストレス度　　</em>         
+            <em>d.不安：何をすれば良いかわからず、プレッシャーによる神経・感覚の負担度</em>         
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:stressfeeld_id, Stressfeeld.all, :id, :name, {}, {class: "form__score"}) %>
@@ -119,7 +119,7 @@
           <%# リフレッシュ習慣フォームからの点数化 %>
           <strong class="health__box" >行動面　　　　　　　　　　</strong>
           <div class="health__text">
-            <em>a.仕事：忙しくてもやりがいあって、自分に適した業務による満足度　　　　</em>
+            <em>a.仕事：忙しくてもやりがいあって、自分に適した分量・業務でできる満足度</em>
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:refreshdoa_id, Refreshdoa.all, :id, :name, {}, {class: "form__score"}) %>
@@ -128,7 +128,7 @@
              </div>
           </div>
           <div class="health__text">
-            <em>b.人脈：付き合い・交流がうまくいき、本音でも話し合える人脈の豊富度　　</em>
+            <em>b.人脈：付き合い・交流がうまくいき、本音でも話し合える人脈の豊富な度合</em>
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:refreshdob_id, Refreshdob.all, :id, :name, {}, {class: "form__score"}) %>
@@ -137,7 +137,7 @@
             </div>
           </div>          
           <div class="health__text">
-            <em>c.生活環境：恵まれた生活で、周辺も整音・衛生清潔・安定でのリラックス度</em>
+            <em>c.生活環境：環境良い生活で、周辺も整音・衛生清潔・安定でのリラックス度</em>
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:refreshdoc_id, Refreshdoc.all, :id, :name, {}, {class: "form__score"}) %>
@@ -146,7 +146,7 @@
             </div>
           </div>          
           <div class="health__text">
-            <em>d利益：貯金、投資も十分できる家計があり、買物も余裕持ってできる充実度</em>
+            <em>d.利益：貯金、投資も十分な家計であり、買物も心配なくよくできる充実度　</em>
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:refreshdod_id, Refreshdod.all, :id, :name, {}, {class: "form__score"}) %>
@@ -156,7 +156,7 @@
           </div> 
           <strong class="health__box" >心理面　　　　　　　　　　</strong>
           <div class="health__text">
-            <em>a.趣味：楽しむ事物があり、痛み、辛さ、嫌な事を解消できるリフレッシュ度</em>
+            <em>a.趣味：やりたい事で楽しめて、辛さ、嫌な事を解消できるリフレッシュ度　</em>
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:refreshfeela_id, Refreshfeela.all, :id, :name, {}, {class: "form__score"}) %>
@@ -174,7 +174,7 @@
             </div>
           </div>           
           <div class="health__text">
-            <em>c.仲間：好感的に話し合える集まりがあり、問題でも共同で対処できる好感度</em>
+            <em>c.仲間：仲良く話し合える集まりがあり、うまく共同で対応できる好感度　　</em>
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:refreshfeelc_id, Refreshfeelc.all, :id, :name, {}, {class: "form__score"}) %>
@@ -183,7 +183,7 @@
             </div>
           </div>     
           <div class="health__text">
-            <em>d.安心：セキュリティ対策も十分整っていて、いざという時も平常心の安定度</em>
+            <em>d.安定：何事にも落ち着いてでき、セキュリティ体制も十分に整った安心度　</em>
             <div class="health__box">
               <%# 5段階評価(1.低い/少ない～5.高い/多い) %>
               <%= f.collection_select(:refreshfeeld_id, Refreshfeeld.all, :id, :name, {}, {class: "form__score"}) %>
