@@ -33,7 +33,7 @@
       </div>
       <div class="care_title">
         <%= f.label :caremethod_id , "◎提案ケア・アクティブからの選定　　" %><br>
-        <%= f.collection_select(:caremethod_id , Caremethod.all, :id , :name , {}, {class: "care_select"} ) %>
+        <%= f.collection_select(:caremethod_id , Caremethod.all , :id , :name , {}, {class: "care_select"} ) %>
       </div>
 
        <div class="actions">
