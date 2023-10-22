@@ -1,6 +1,6 @@
 <h2 class="form__text">登録変更!? <%= "#{current_user.nickname}さん"%></h2>  <%# resource_name.to_s.humanize %>
   
-    <%= image_tag "伊吹山.jpg" , class: "user_image" %>
+    <%= image_tag "琵琶湖虹.jpg" , class: "user_image" %>
 
 <%= form_with model: @user, url: user_registration_path, class: "user__wrapper", html: { method: :put } ,local: true do |f| %>
 
