@@ -72,7 +72,7 @@
           <td class="detail-value"><%= @health.refreshdoc_id%>点</td>
         </tr>
         <tr>
-          <th class="health-detail">利益</th>
+          <th class="health-detail">満足</th>
           <td class="detail-value"><%= @health.refreshdod_id%>点</td>
         </tr>
         <tr>
@@ -124,50 +124,51 @@
         <div class="cares_list" >
           <%# リフレッシュの方が大きく、健康的な場合 %>
           <% if  ( @health.refreshdoa_id.to_i + @health.refreshdob_id.to_i + @health.refreshdoc_id.to_i + @health.refreshdod_id.to_i + @health.refreshfeela_id.to_i + @health.refreshfeelb_id.to_i + @health.refreshfeelc_id.to_i + @health.refreshfeeld_id.to_i ) * @health.refreshweight_id.to_i - ( @health.stressdoa_id.to_i + @health.stressdob_id.to_i + @health.stressdoc_id.to_i + @health.stressdod_id.to_i + @health.stressfeela_id.to_i + @health.stressfeelb_id.to_i + @health.stressfeelc_id.to_i + @health.stressfeeld_id.to_i ) * @health.stressweight_id.to_i > 0 %>
-            〇リフレッシュ習慣：有り⇒良い習慣と考えられます。念の為ストレスため込みには気を付け、健康続く様に日頃の習慣を大切にしたいですね！！！<br>
+            〇リフレッシュ習慣：有り⇒良い習慣と考えられます。健康が続く様に日頃の習慣を大切にしたいですね！！！<br>
             <%= image_tag "展望観光.JPG" , class: "carecard__img" %>
             <% if  ( @health.refreshdoa_id.to_i + @health.refreshdob_id.to_i + @health.refreshdoc_id.to_i + @health.refreshdod_id.to_i + @health.refreshfeela_id.to_i + @health.refreshfeelb_id.to_i + @health.refreshfeelc_id.to_i + @health.refreshfeeld_id.to_i ) * @health.refreshweight_id.to_i - ( @health.stressdoa_id.to_i + @health.stressdob_id.to_i + @health.stressdoc_id.to_i + @health.stressdod_id.to_i + @health.stressfeela_id.to_i + @health.stressfeelb_id.to_i + @health.stressfeelc_id.to_i + @health.stressfeeld_id.to_i ) * @health.stressweight_id.to_i >= 25 %>
-              ⦿⦿リフレッシュする習慣：良好!→今後も健康維持の為にリフレッシュできる時間・場所を大事に色々と挑戦しましょう！！<br>
+              ⦿⦿リフレッシュする習慣：良好!→今後も健康維持の為にリフレッシュできる時間・場所が大切と考えられます。色々と挑戦しましょう！！<br>
               <%= image_tag "新幹線旅行.JPG", class: "carecard__img" %>
               <% if  ( @health.refreshdoa_id.to_i + @health.refreshdob_id.to_i + @health.refreshdoc_id.to_i + @health.refreshdod_id.to_i + @health.refreshfeela_id.to_i + @health.refreshfeelb_id.to_i + @health.refreshfeelc_id.to_i + @health.refreshfeeld_id.to_i ) * @health.refreshweight_id.to_i - ( @health.stressdoa_id.to_i + @health.stressdob_id.to_i + @health.stressdoc_id.to_i + @health.stressdod_id.to_i + @health.stressfeela_id.to_i + @health.stressfeelb_id.to_i + @health.stressfeelc_id.to_i + @health.stressfeeld_id.to_i ) * @health.stressweight_id.to_i > 60 %>
-                ◎◎◎リフレッシュできる習慣：順調！もう積極的に活躍できる機会への参加が期待されます！<br>
+                ◎◎◎リフレッシュできる習慣：順調！その調子です。！もう積極的に活躍できる機会への参加が期待されます！<br>
                 <%= image_tag "活発な交流会.JPG", class: "carecard__img" %>
-                ◇◇◇ストレス対処：優良<hr>
+                ◇◇◇ストレス対処：優良。ストレスあってもすぐに解消できている感じで問題ありません。<hr>
               <% else %>
                 <%= image_tag "健康ペットボトル式飲料.JPG", class: "carecard__img" %>
-                ◇◇ストレス処理：可能で大丈夫<hr>
+                ◇◇ストレス処理：うまくいって大丈夫。念の為、たまり積もったストレスが無いか管理も良いですね。<hr>
               <% end %>
             <% else %>
               <%= image_tag "natural.png", class: "carecard__img" %> 
-              ◇たまったストレス：やや有り<hr>
+              <hr>
               <%= image_tag "健康ペットボトル式飲料.JPG", class: "carecard__img" %>
+              ◇たまったストレス：やや有り。ただ、ストレスため込みには気を付けたいですね。
             <% end %>
           <%# リフレッシュ・ストレスが同じで、微妙で曖昧な場合 %>
           <% elsif ( @health.refreshdoa_id.to_i + @health.refreshdob_id.to_i + @health.refreshdoc_id.to_i + @health.refreshdod_id.to_i + @health.refreshfeela_id.to_i + @health.refreshfeelb_id.to_i + @health.refreshfeelc_id.to_i + @health.refreshfeeld_id.to_i ) * @health.refreshweight_id.to_i - ( @health.stressdoa_id.to_i + @health.stressdob_id.to_i + @health.stressdoc_id.to_i + @health.stressdod_id.to_i + @health.stressfeela_id.to_i + @health.stressfeelb_id.to_i + @health.stressfeelc_id.to_i + @health.stressfeeld_id.to_i ) * @health.stressweight_id.to_i == 0 %>
             <%= image_tag "展望観光.JPG", class: "carecard__img" %>
-            ・ストレスあってもリフレッシュで天然で自然との共生も良いではないでしょうか！？
+            ・ストレスあってもリフレッシュで天然で自然との共生も、良いと思われます。
             <%= image_tag "natural.png", class: "carecard__img" %> 
             <%= image_tag "健康パウチ式ゼリー飲料.JPG", class: "carecard__img" %>      
 
           <%# ストレスの方が大きく、健康にむけて改善が必要な場合 %>    
           <% else %>
-          ◇たまったストレス：有り⇒日頃から頑張っている分、ストレスもあると思います。リフレッシュも心がけていきたいですね！+***+<hr>
+          ◇たまったストレス：有り⇒日頃から頑張っている分、ストレスもあると思います。リフレッシュの心がけとして、健康飲料も良いですよ！+***+<hr>
             <%= image_tag "健康パウチ式ゼリー飲料.JPG", class: "carecard__img" %>
             <% if  ( @health.refreshdoa_id.to_i + @health.refreshdob_id.to_i + @health.refreshdoc_id.to_i + @health.refreshdod_id.to_i + @health.refreshfeela_id.to_i + @health.refreshfeelb_id.to_i + @health.refreshfeelc_id.to_i + @health.refreshfeeld_id.to_i ) * @health.refreshweight_id.to_i - ( @health.stressdoa_id.to_i + @health.stressdob_id.to_i + @health.stressdoc_id.to_i + @health.stressdod_id.to_i + @health.stressfeela_id.to_i + @health.stressfeelb_id.to_i + @health.stressfeelc_id.to_i + @health.stressfeeld_id.to_i ) * @health.stressweight_id.to_i <= -25 %>
-              ◆◆ストレス処理：多くて大変!→毎日頑張って大変ですが、リフレッシュできる時間・場所を大切にしてきましょう！！++***++<br>
+              ◆◆ストレス処理：多くて大変!→毎日頑張って大変とは思いますが、リフレッシュできる時間・場所を大切にしてきましょう！！++***++<br>
                 <%= image_tag "健康サプリメント.JPG", class: "carecard__img" %>
               <% if  ( @health.refreshdoa_id.to_i + @health.refreshdob_id.to_i + @health.refreshdoc_id.to_i + @health.refreshdod_id.to_i + @health.refreshfeela_id.to_i + @health.refreshfeelb_id.to_i + @health.refreshfeelc_id.to_i + @health.refreshfeeld_id.to_i ) * @health.refreshweight_id.to_i - ( @health.stressdoa_id.to_i + @health.stressdob_id.to_i + @health.stressdoc_id.to_i + @health.stressdod_id.to_i + @health.stressfeela_id.to_i + @health.stressfeelb_id.to_i + @health.stressfeelc_id.to_i + @health.stressfeeld_id.to_i ) * @health.stressweight_id.to_i < -60 %>
-                ❖❖❖ストレス対処：過剰で困難！今からすぐにケア対策の為に改善が必要ですので、ケア専門機関も奨励致します！！！+++***+++<hr>
+                ❖❖❖ストレス対処：過剰で困難！今からすぐにケア対策の為に改善が必要です！ケア専門機関として医療機関も奨励致します！！！+++***+++<hr>
                 <%= image_tag "医療機関.JPG", class: "carecard__img" %>
-                〇〇〇リフレッシュ中々できない習慣！⇒ケアが必要と思われます+**+!<br>
+                〇〇〇リフレッシュ中々できない習慣！⇒今後はケアが必要と分析されます+**+!<br>
               <% else %>
                 <%= image_tag "娯楽エンターテインメント.JPG" , class: "carecard__img" %>
-                〇〇リフレッシュしたい習慣：欲しい!→今後も健康維持の為にリフレッシュできる時間・場所を大切にしてきましょう++!<br>
+                〇〇リフレッシュしたい習慣：もうちょっと欲しい習慣!→健康維持の為にリフレッシュできる時間・場所を大切にしてきましょう++!<br>
               <% end %>
             <% else %>
               <%= image_tag "natural.png", class: "carecard__img" %>        
-              〇リフレッシュ習慣：やや有り<hr>
               <%= image_tag "娯楽エンターテインメント.JPG" , class: "carecard__img" %>
+              〇リフレッシュ習慣：やや有り。休日では趣味として、娯楽・観光もあれば良いですね。<hr>            
             <% end %>
           <% end %>
       </div>
