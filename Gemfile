@@ -1,12 +1,11 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-<<<<<<< Updated upstream
-=======
+
 #旧PCバージョン ruby '2.6.5'
 #新PCバージョン 
->>>>>>> Stashed changes
 ruby '2.7.7'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.0'
