@@ -148,6 +148,7 @@ healthcare.dio
 # ローカルでの動作方法
 ・git clone https://github.com/Sugi-Hi/healthcare-39228
 ・cd ~/Techcamp/projects/healthcare-39228
+・ruby 2.6.5
 ・bundle install
 ・yarn install
 ・rails s
