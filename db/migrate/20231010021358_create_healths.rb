@@ -1,7 +1,7 @@
 class CreateHealths < ActiveRecord::Migration[6.0]
   def change
     create_table :healths do |t|
-      # ひとまとめの要因、習慣
+      # 特にストレス要因、リフレッシュ習慣になっている主題名
       t.string      :stress         , null:false
       t.string      :refresh        , null:false
       # ストレス点数

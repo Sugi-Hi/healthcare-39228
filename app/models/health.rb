@@ -32,6 +32,7 @@ class Health < ApplicationRecord
   # end
 
   with_options  numericality: {only_integer: true, other_than: 0, message: "must be other than 0" } do
+    # ストレス高低項目：5段階評価
     validates :stressdoa_id
     validates :stressdob_id  
     validates :stressdoc_id  
@@ -40,8 +41,10 @@ class Health < ApplicationRecord
     validates :stressfeelb_id  
     validates :stressfeelc_id  
     validates :stressfeeld_id  
+    # ストレス重度：3段階評価
     validates :stressweight_id  
 
+    # リフレッシュ高低項目：5段階評価
     validates :refreshdoa_id  
     validates :refreshdob_id  
     validates :refreshdoc_id 
@@ -50,7 +53,9 @@ class Health < ApplicationRecord
     validates :refreshfeelb_id  
     validates :refreshfeelc_id  
     validates :refreshfeeld_id  
-    validates :refreshweight_id  
+    # リフレッシュ優先度：3段階評価
+    validates :refreshweight_id 
+
   end
 
 
@@ -59,6 +64,7 @@ class Health < ApplicationRecord
   belongs_to :user
   has_many :cares, dependent: :destroy
 
+  # 検索欄はあっても、今後の課題となった検索機能
   def self.search(search)
     if search != ""
       Health.where('title LIKE(?)' , "%#{search}%" )
