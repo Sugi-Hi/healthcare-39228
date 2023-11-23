@@ -197,13 +197,15 @@ healthcare.dio
 
 ・ターミナル：Ubuntu
 
-・PC言語：HTML/CSS、Ruby on Rails、JavaScript
+・PC言語：HTML/CSS、Ruby、Ruby on Rails、JavaScript
+
+・データベース：MySQL(DBeaver)
 
 ・記録・経緯：GitHub Desktop
 
 ・ローカル(個人)環境：localhost:3000
 
-・本番環境：Render Dashboard
+・本番環境：GitHub、Render Dashboard、PostgreSQL(TablePlus)
 
 ・参考資料：Google検索(ChatGPT、Qiitaなど)
 
