@@ -193,19 +193,23 @@ healthcare.dio
 ----------------------------------------------------------
 
 # 開発環境
-・プログラミング：Visual Studio code
+・プログラミングコード：Visual Studio code
 
 ・ターミナル：Ubuntu
 
-・PC言語：HTML/CSS、Ruby、Ruby on Rails、JavaScript
+・プログラミング言語：HTML/CSS、Ruby、Ruby on Rails、JavaScript
 
-・データベース：MySQL(DBeaver)
+・データベースDB：MySQL(DBeaver)
 
 ・記録・経緯：GitHub Desktop
 
 ・ローカル(個人)環境：localhost:3000
 
-・本番環境：GitHub、Render Dashboard、PostgreSQL(TablePlus)
+・本番環境：GitHub、Render(Dashboard)、PostgreSQL(TablePlus)
+
+・企画・要件定義：Goobleスプレッドシート
+
+・DB設計ER図：Draw.io拡張機能
 
 ・参考資料：Google検索(ChatGPT、Qiitaなど)
 
