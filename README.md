@@ -120,8 +120,12 @@ https://docs.google.com/spreadsheets/d/1m0IO_7z3tM7Sson11jOdkInVE6r80QBjZWSf-xsA
 
 ○「連携GitHubDesktopコミット・プッシュ」自動デプロイON
 
-
 [9]一時完了後の修正期間：10/21(土)～10/27(金)
+
+実装完成予定時間：103時間
+
+[実際完成時間]：147時間程
+
 
 # データベース設計
 ## ER図
