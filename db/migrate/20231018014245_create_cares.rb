@@ -1,8 +1,9 @@
 class CreateCares < ActiveRecord::Migration[6.0]
   def change
     create_table :cares do |t|
-      # 対策の日程(必須)・時間帯(任意)
+      # 対策の日程(必須)
       t.date          :care_date,     null: false
+      # 時間帯(任意)
       t.time          :care_time
       # 対策の場所(任意)
       t.text          :care_place
