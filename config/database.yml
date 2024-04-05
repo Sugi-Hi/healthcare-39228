@@ -54,11 +54,19 @@ test:
 #
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
-#
+
+
 production:
   <<: *default
-  adapter: postgresql
-  url: <%= ENV['DATABASE_URL'] %>
+  adapter: mysql2
+  database: healthcare-39228_production
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
+  # production:
+#   <<: *default
+#   adapter: postgresql
+#   url: <%= ENV['DATABASE_URL'] %>
   # database: healthcare-39228_production
   # username: healthcare-39228
   # password: <%= ENV['HEALTHCARE_39228_DATABASE_PASSWORD'] %>
