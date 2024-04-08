@@ -15,12 +15,12 @@ https://healthcare-39228.onrender.com
 ## 健康診断回答者用(healthさん)
 ・メールアドレス：health@h.com
 
-・パスワード：care2023
+・パスワード：heal2019
 
 ## 回答との共感者者用(careさん)
 ・メールアドレス：care@c.com
 
-・パスワード：health23
+・パスワード：care2021
 
 
 # 利用方法
