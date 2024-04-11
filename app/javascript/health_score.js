@@ -14,13 +14,11 @@ window.addEventListener('load', () => {
     addStressScore.innerHTML = inputStressScore
   })
 
-  // refreshInput.addEventListener("change", () => {
-  //   const inputRefreshScore = refreshInput.value;
+  refreshInput.addEventListener("change", () => {
+    const inputRefreshScore = refreshInput.value;
 
-  //   const addRefreshScore = document.getElementById("add-refresh-score");
-  //   addRefreshScore.innerHTML = inputRefreshScore
-  // })
-
-
+    const addRefreshScore = document.getElementById("add-refresh-score");
+    addRefreshScore.innerHTML = inputRefreshScore
+  })
 
 });
