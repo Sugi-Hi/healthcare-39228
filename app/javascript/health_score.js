@@ -7,14 +7,14 @@ window.addEventListener('load', () => {
   console.log("ストレス")
   console.log("リフレッシュ")
 
-  stressInput.addEventListener("change", () => {
+  stressInput.addEventListener("input", () => {
     const inputStressScore = stressInput.value;
 
     const addStressScore = document.getElementById("add-stress-score");
     addStressScore.innerHTML = inputStressScore
   })
 
-  refreshInput.addEventListener("change", () => {
+  refreshInput.addEventListener("input", () => {
     const inputRefreshScore = refreshInput.value;
 
     const addRefreshScore = document.getElementById("add-refresh-score");
