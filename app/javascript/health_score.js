@@ -9,7 +9,7 @@ window.addEventListener('load', () => {
 
   stressInput.addEventListener("input", () => {
     const inputStressScore = stressInput.value;
-    console.log("ストレス値")
+    console.log("ストレス値");
 
     const addStressScore = document.getElementById("add-stress-score");
     addStressScore.innerHTML = inputStressScore
@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
 
   refreshInput.addEventListener("input", () => {
     const inputRefreshScore = refreshInput.value;
-    console.log("リフレッシュ値")
+    console.log("リフレッシュ値");
 
     const addRefreshScore = document.getElementById("add-refresh-score");
     addRefreshScore.innerHTML = inputRefreshScore
