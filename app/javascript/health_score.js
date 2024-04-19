@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
   console.log("ストレスレベル")
   console.log("リフレッシュランク")
 
-  stressInput.addEventListener("input", () => {
+  stressInput.addEventListener('input', () => {
     const inputStressScore = stressInput.value;
     console.log("ストレス値");
 
@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
     addStressScore.innerHTML = inputStressScore
   })
 
-  refreshInput.addEventListener("input", () => {
+  refreshInput.addEventListener('input', () => {
     const inputRefreshScore = refreshInput.value;
     console.log("リフレッシュ値");
 
