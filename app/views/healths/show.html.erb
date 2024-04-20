@@ -48,7 +48,7 @@
         </tr>
         <tr class="title-border">
           <th class="health-detail"> ストレス総合点数</th>
-          <td class="detail-value"><%= ( @health.stressdoa_id.to_i + @health.stressdob_id.to_i + @health.stressdoc_id.to_i + @health.stressdod_id.to_i + @health.stressfeela_id.to_i + @health.stressfeelb_id.to_i + @health.stressfeelc_id.to_i + @health.stressfeeld_id.to_i ) * @health.stressweight_id.to_i %>点</td>
+          <td id="cal-stress-score" class="detail-value"><%= ( @health.stressdoa_id.to_i + @health.stressdob_id.to_i + @health.stressdoc_id.to_i + @health.stressdod_id.to_i + @health.stressfeela_id.to_i + @health.stressfeelb_id.to_i + @health.stressfeelc_id.to_i + @health.stressfeeld_id.to_i ) * @health.stressweight_id.to_i %>点</td>
         </tr>        
       </tbody> 
     </table>
@@ -97,7 +97,7 @@
         </tr>
         <tr class="title-border">
           <th class="health-detail"> リフレッシュ総合点数</th>
-          <td class="detail-value"><%= ( @health.refreshdoa_id.to_i + @health.refreshdob_id.to_i + @health.refreshdoc_id.to_i + @health.refreshdod_id.to_i + @health.refreshfeela_id.to_i + @health.refreshfeelb_id.to_i + @health.refreshfeelc_id.to_i + @health.refreshfeeld_id.to_i ) * @health.refreshweight_id.to_i %>点</td>
+          <td id="cal-refresh-score" class="detail-value"><%= ( @health.refreshdoa_id.to_i + @health.refreshdob_id.to_i + @health.refreshdoc_id.to_i + @health.refreshdod_id.to_i + @health.refreshfeela_id.to_i + @health.refreshfeelb_id.to_i + @health.refreshfeelc_id.to_i + @health.refreshfeeld_id.to_i ) * @health.refreshweight_id.to_i %>点</td>
         </tr>      
       </tbody> 
     </table>
