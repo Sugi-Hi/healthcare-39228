@@ -6,7 +6,7 @@
     <title>HealthCare39228</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <script type="text/javascript" src="../../javascript/health_score.js"></script>
+    <script type="text/javascript" src="../../javascript/packs/application.js"></script>
     <%= stylesheet_link_tag 'application', media: 'all'  %>
     <%= javascript_pack_tag 'application' %>
     <%# <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -24,7 +24,7 @@
           <%# 検索機能フォーム欄 %>
           <div class="nav__center">
             <%= form_with(url: "#" , method: :get,  local: true, class: "search_text") do |form| %>
-              <%= form.text_field :keyword, placeholder: "検索する(※只今調整中)" %>
+              <%= form.text_field :keyword, placeholder: "検索する(※只今、調整中)" %>
               <%= form.submit "検索" %>
             <% end %>
           </div>
